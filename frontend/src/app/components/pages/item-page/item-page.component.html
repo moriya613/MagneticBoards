@@ -1,0 +1,40 @@
+<div *ngIf="item" class="container">
+    <img [src]="item.imageUrl" [alt]="item.name"/>
+  
+    <div class="details">
+      <div class="header">
+        <span class="name">
+          {{item.name}}
+        </span>
+        <span class="favorite {{item.favorite? '': 'not'}}">❤</span>
+      </div>
+  
+      <div class="tags">
+        <span *ngFor="let tag of item.tags">
+          {{tag}}
+        </span>
+      </div>
+
+  
+      <div class="width">
+        <span>
+          רוחב <strong>{{item.width}}</strong> ס"מ
+        </span>
+      </div>
+
+      <div class="width">
+        <span>
+          אורך <strong>{{item.length}}</strong> ס"מ
+        </span>
+      </div>
+  
+      <div class="price">
+        <span>
+            &#8362;{{item.price}}
+        </span>
+      </div>
+  
+      <button (click)="addToCart()">הוסף ללוח</button>
+  
+    </div>
+  </div>

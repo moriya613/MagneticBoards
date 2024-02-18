@@ -1,0 +1,27 @@
+<header>
+    <div class = "container">
+      <a routerLink="/" class="logo" >Magnetic Boards</a>
+      <nav>
+        <ul>
+          <li *ngIf="!isAuth">
+            <a routerLink="/login" >התחברות</a>
+  
+          </li>
+          <li  *ngIf="isAuth" class = "menu-container">
+            <a routerLink="/dascoard" >{{user.name}}</a>
+            <div class="menu">
+              <a routerLink="/profile" >פרופיל</a>
+              <a routerLink="/orders" >הלוחות שלי</a>
+              <a (click)="logout()">התנתק</a>
+  
+            </div>
+          </li>
+          <li>
+            <a routerLink="/cart-page">
+              הלוח שלי <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>

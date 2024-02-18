@@ -1,0 +1,45 @@
+<div class="select-container">
+        <label class="niceSelect">:בחר רוחב לוח (מטרים)</label>
+        <div class="custom-select">
+        <select id="niceSelect" [(ngModel)]="widthOfBoard">
+            <option *ngFor="let option of widthOptions" [value]="option *10">{{ option }}</option>
+        </select>
+        <div class="select-arrow">&#9660;</div>
+        </div>
+   
+    <label class="niceSelect">:בחר אורך לוח (מטרים)</label>
+    <div class="custom-select">
+      <select id="niceSelect" [(ngModel)]="heightOfBoard">
+        <option *ngFor="let option of heightOptions" [value]="option * 10">{{ option }}</option>
+    </select>
+      <div class="select-arrow">&#9660;</div>
+</div>
+
+
+  </div>
+
+  <div class="select-container">
+    
+  </div>
+
+
+<div class="board-container">
+
+    <div class="center-content"
+        [style.height.cm]="heightOfBoard"
+        [style.width.cm]="widthOfBoard">
+            <ul>
+                <li *ngFor="let cartItem of cart.items" >
+                    <div class="image-container"
+                    [style.height.cm]="cartItem.item.length"
+                    [style.width.cm]="cartItem.item.width">
+                        <img class="scaled-image"
+                        [src]="cartItem.item.imageUrl"
+                        cdkDrag [cdkDragFreeDragPosition]="cartItem.position"
+                        cdkDrag cdkDragBoundary=".center-content" 
+                        (cdkDragEnded)="onDragEnded($event, cartItem.item.imageUrl)"> 
+                    </div>
+                </li>
+            </ul>
+     </div>
+</div>

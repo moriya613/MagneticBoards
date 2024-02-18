@@ -1,0 +1,69 @@
+<app-title title="הלוח שלי" margine="1.5rem 0 0 2.5rem"></app-title>
+
+<div class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.item.imageUrl" [alt]="cartItem.item.name" drag>
+            </div>
+
+            <div>
+                <a routerLink="/item/{{cartItem.item.id}}">
+                  {{cartItem.item.name}}
+                </a>
+            </div>
+
+            <!-- <div>
+                <select #quantitySelect
+                    [value]="cartItem.quantity"
+                    (change)="changeQuantity(cartItem,quantitySelect.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+
+                 </select>
+            </div> -->
+
+            <div>
+                &#8362;{{cartItem.price}}
+            </div>
+
+            <div>
+                <button class="remove-button" (click)="removeFromCart(cartItem)">
+                    הסר
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="checkout">
+        <div>
+            <div class="total-count">{{cart.totalCount}}</div>
+            <div class="total-price">  &#8362; {{cart.totalPrice}}</div>
+        </div>
+        
+        <a routerLink="/checkout">סיים לוח</a>
+
+    </div>
+</div>
+
+<app-board></app-board>
+
+<!-- <div class="board-container">
+     <a> עצב את הלוח </a> 
+    <div class="board" >
+        <ul>
+            <li *ngFor="let cartItem of cart.items" >
+                    <img 
+                    [src]="cartItem.item.imageUrl"
+                    [width]="cartItem.item.width"
+                    [height]="cartItem.item.length"
+                    cdkDrag [cdkDragFreeDragPosition]="cartItem.position"
+                    cdkDrag cdkDragBoundary=".board" 
+                    (cdkDragEnded)="onDragEnded($event, cartItem.item.imageUrl)">
+            </li>
+        </ul>
+    </div>
+</div> -->

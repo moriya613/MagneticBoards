@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 3rem;
+}
+
+details {
+    width: 25rem;
+    margin-bottom: 10rem;
+    margin-bottom: 10rem;
+
+}
+
+.selectRole{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+select{
+    width: 5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 1.1rem;
+    font-weight: 100;
+  }
+
+.selectClass{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

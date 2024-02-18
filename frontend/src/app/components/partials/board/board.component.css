@@ -1,0 +1,103 @@
+.board-container {
+
+    margin: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 100% of the viewport height */
+}  
+
+.center-content {
+    display: flex;
+
+    border: 5px solid gainsboro;
+    border-radius: 1rem;
+    /* Additional styles for your centered content */
+  }
+
+  .center-content ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .center-content li {
+    margin-right: 10px; /* Adjust margin as needed for spacing between items */
+  }
+
+.image-container {
+    position: relative;
+   
+   }
+
+  .scaled-image:hover{
+    opacity: 0.5;
+    cursor: move;
+  }
+  
+  .scaled-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This property maintains the aspect ratio of the image */
+  }
+
+  .select-container label{
+    margin: 55px;
+  }
+
+  .select-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-left: 30px;
+  }
+
+  
+  .custom-select {
+    position: relative;
+    width: 200px; /* Set a fixed width or adjust as needed */
+  }
+  
+  .custom-select select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #961212;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-color: #f7f7f7;
+  }
+  
+  .custom-select select:focus {
+    outline: none;
+    border-color: #ac2727; /* Adjust the color as needed */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Adjust the shadow as needed */
+  }
+  
+  .select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Style the options */
+  .custom-select select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style the selected option */
+  .custom-select select option:checked {
+    background-color: #be3754; /* Adjust the color as needed */
+    color: #fff;
+  }
+
+  select:hover{
+    opacity: 0.5;
+  }
+  
