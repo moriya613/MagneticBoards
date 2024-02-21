@@ -39,13 +39,11 @@ export class LoginPageComponent {
     this.isSubmitted = true;
     if(this.loginForm.invalid) return;
    this.userService.login({email:this.fc.email.value, password: this.fc.password.value})
-   .subscribe(()=>{
-
-      this.router.navigateByUrl(this.returnUrl);
-   });
-
-   this.errorMessage = localStorage.getItem("ERROR") || "";
-
+   .subscribe({
+    next: (v) =>  this.router.navigateByUrl(this.returnUrl),
+    error: (e) => this.errorMessage = localStorage.getItem("ERROR") || "",
+});
+  
   } 
 }
 

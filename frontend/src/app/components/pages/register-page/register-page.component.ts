@@ -67,12 +67,11 @@ export class RegisterPageComponent implements OnInit {
       character: fv.chracter
     };
 
-    this.userService.register(user).subscribe(_ => {
-      this.router.navigateByUrl(this.returnUrl);
-    });
+    this.userService.register(user) .subscribe({
+      next: (v) =>  this.router.navigateByUrl(this.returnUrl),
+      error: (e) => this.errorMessage = localStorage.getItem("ERROR") || "",
 
-    this.errorMessage = localStorage.getItem("ERROR") || "";
-
-  }
+  });
+}
 
 }

@@ -20,6 +20,7 @@ details {
 
 select{
     width: 5rem;
+    height: 2rem;
     outline: none;
     border: none;
     border-bottom: 1px solid lightgrey;
