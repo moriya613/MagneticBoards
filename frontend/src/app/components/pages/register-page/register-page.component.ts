@@ -25,11 +25,16 @@ export class RegisterPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(5)]],
+      name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(5)]],
       confirmPassword: ['', Validators.required],
-      address: ['', [Validators.required, Validators.minLength(10)]]
+      schoolName: ['', [ Validators.minLength(2)]],
+      schoolCode: ['', [Validators.required, Validators.minLength(2)]],
+      grade: [''],
+      role: [' ', Validators.required],
+      character: [''],
+      address: ['', [ Validators.minLength(3)]] // school address
     },{
       validators: PasswordsMatchValidator('password','confirmPassword')
     });
@@ -44,7 +49,8 @@ export class RegisterPageComponent implements OnInit {
   submit(){
     debugger;
     this.isSubmitted = true;
-    if(this.registerForm.invalid) return;
+    if(this.registerForm.invalid)
+     return;
 
     const fv= this.registerForm.value;
     const user :IUserRegister = {
@@ -52,7 +58,12 @@ export class RegisterPageComponent implements OnInit {
       email: fv.email,
       password: fv.password,
       confirmPassword: fv.confirmPassword,
-      address: fv.address
+      address: fv.address,
+      schoolCode: fv.schoolCode,
+      schoolName: fv.schoolName,
+      role: fv.role,
+      grade: fv.grade,
+      character: fv.chracter
     };
 
     this.userService.register(user).subscribe(_ => {

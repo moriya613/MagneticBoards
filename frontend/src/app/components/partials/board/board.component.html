@@ -1,25 +1,25 @@
-<div class="select-container">
-        <label class="niceSelect">:בחר רוחב לוח (מטרים)</label>
+<div class="container" dir="ltr">
         <div class="custom-select">
-        <select id="niceSelect" [(ngModel)]="widthOfBoard">
-            <option *ngFor="let option of widthOptions" [value]="option *10">{{ option }}</option>
-        </select>
-        <div class="select-arrow">&#9660;</div>
+            <select id="niceSelect" [(ngModel)]="widthOfBoard">
+                <option *ngFor="let option of widthOptions" [value]="option *10">{{ option }}</option>
+            </select>
+            <label class="niceSelect"> 
+              בחר רוחב לוח (מטרים)</label>
+
+            
         </div>
    
-    <label class="niceSelect">:בחר אורך לוח (מטרים)</label>
     <div class="custom-select">
-      <select id="niceSelect" [(ngModel)]="heightOfBoard">
-        <option *ngFor="let option of heightOptions" [value]="option * 10">{{ option }}</option>
-    </select>
-      <div class="select-arrow">&#9660;</div>
-</div>
+        <select id="niceSelect" [(ngModel)]="heightOfBoard">
+            <option *ngFor="let option of heightOptions" [value]="option * 10">{{ option }}</option>
+        </select>
+            <label class="niceSelect"> 
+              בחר אורך לוח (מטרים)  </label>
+
+        
+    </div>
 
 
-  </div>
-
-  <div class="select-container">
-    
   </div>
 
 

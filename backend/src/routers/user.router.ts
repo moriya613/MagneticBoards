@@ -41,8 +41,9 @@ router.post("/login", asyncHandler(
     
     async (req, res) => {
       console.log("inside register");
+     
 
-        const {name, email, password, address} = req.body;
+        const {name, email, password, address, schoolName, schoolCode, grade , charactter, role} = req.body;
         const user = await UserModel.findOne({email});
         if(user){
           console.log("user exist");
@@ -58,7 +59,12 @@ router.post("/login", asyncHandler(
             email:email.toLowerCase(),
             password: encryptedPassword,
             address,
-            isAdmin:false
+            role:role,
+            schoolCode:schoolCode,
+            schoolName:schoolName,
+            grade:grade,
+            charactter:charactter,
+            isSuperAdmin:false
         }
 
         console.log("creating a user")
@@ -69,17 +75,22 @@ router.post("/login", asyncHandler(
   
     const generateTokenResponse = (user : User) => {
       const token = jwt.sign({
-        email:user.email, isAdmin: user.isAdmin
+        email:user.email, isAdmin: user.isSuperAdmin
       },process.env.JWT_SECRET!,{
         expiresIn:"30d"
       });
-  
+
       return {
         id: user.id,
         email: user.email,
         name: user.name,
         address: user.address,
-        isAdmin: user.isAdmin,
+        schoolName: user.schoolName,
+        schoolCode: user.schoolCode,
+        grade: user.grade,
+        character: user.charactter,
+        role: user.role,
+        isSuperAdmin: user.isSuperAdmin,
         token: token
       };
     }

@@ -4,4 +4,9 @@ export interface IUserRegister{
     password: string;
     confirmPassword: string;
     address:string;
+    schoolName:string;
+    schoolCode:string;
+    role: string;
+    grade: string;
+    character: string;
 }

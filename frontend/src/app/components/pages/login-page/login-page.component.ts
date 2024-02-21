@@ -37,8 +37,9 @@ export class LoginPageComponent {
   submit(){
     this.isSubmitted = true;
     if(this.loginForm.invalid) return;
-   this.userService.login({email:this.fc.email.value, password: this.fc.password.value}).subscribe(()=>{
-    this.router.navigateByUrl(this.returnUrl);
+   this.userService.login({email:this.fc.email.value, password: this.fc.password.value})
+   .subscribe(()=>{
+      this.router.navigateByUrl(this.returnUrl);
    });
   } 
 }

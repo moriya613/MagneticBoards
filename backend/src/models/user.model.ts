@@ -6,15 +6,26 @@ export interface User{
     password: string;
     name:string;
     address:string;
-    isAdmin:boolean;
+    schoolName:string;
+    schoolCode:string;
+    grade:string;
+    charactter:string;
+    role:string;
+    isSuperAdmin:boolean;
 }
 
 export const UserSchema = new Schema<User>({
     name: {type: String, required: true},
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    address: {type: String, required: true},
-    isAdmin: {type: Boolean, required: true},
+    address: {type: String, required: false},
+    role: {type: String, required: true},
+    isSuperAdmin: {type: Boolean, required: true},
+
+    schoolName:{type: String, required: false},
+    schoolCode:{type: String, required: true},
+    grade:{type: String, required: false},
+    charactter:{type: String, required: false},
 }, {
     timestamps: true,
     toJSON:{

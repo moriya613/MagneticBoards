@@ -1,17 +1,17 @@
 <div class="container">
     <div class="details">
-      <app-title title="Register"></app-title>
+      <app-title title="רישום"></app-title>
       <form [formGroup]="registerForm" (ngSubmit)="submit()">
         <text-input
         [control]="fc.name"
         [showErrorsWhen]="isSubmitted"
-        label="Name">
+        label="שם">
       `</text-input>
   
       <text-input
       [control]="fc.email"
       [showErrorsWhen]="isSubmitted"
-      label="Email"
+      label="דואר אלקטרוני"
       type="email">
     `</text-input>
   
@@ -19,25 +19,76 @@
     <text-input
     [control]="fc.password"
     [showErrorsWhen]="isSubmitted"
-    label="Password"
+    label="סיסמא"
     type="password">
   `</text-input>
   
   <text-input
   [control]="fc.confirmPassword"
   [showErrorsWhen]="isSubmitted"
-  label="Confirm Password"
+  label="אשר סיסמא "
   type="password">
   `</text-input>
+
+  <div class="selectRole" dir="rtl">
+    <label for="roleSelector"> תפקיד: </label>
+    <select id="role" formControlName="role">
+      <option value="" disabled></option>
+      <option value="admin">מנהל</option>
+      <option value="teacher">מורה</option>
+    </select>
+  </div>
   
   <text-input
+  *ngIf="registerForm.get('role')?.value === 'admin'"
+  [control]="fc.schoolName"
+  [showErrorsWhen]="isSubmitted"
+  label="שם בית הספר">
+  `</text-input>
+
+  
+  <text-input
+  *ngIf="registerForm.get('role')?.value === 'admin'"
   [control]="fc.address"
   [showErrorsWhen]="isSubmitted"
-  label="Address">
+  label="כתובת בית הספר">
   `</text-input>
+
+  
+  <text-input
+  *ngIf="registerForm.get('role')?.value === 'admin' || registerForm.get('role')?.value === 'teacher'"
+  [control]="fc.schoolCode"
+  [showErrorsWhen]="isSubmitted"
+  label="  קוד מוסד">
+  `</text-input>
+
+  <div class="selectCharacter" dir="rtl"
+  *ngIf="registerForm.get('role')?.value === 'admin'">
+    <label for="roleSelector"> אופי בית הספר: </label>
+    <select id="role" formControlName="character">
+      <option disabled>בחר </option>
+      <option >ממלכתי</option>
+      <option >ממלכתי דתי</option>
+      <option > חרדי</option>
+
+    </select>
+  </div>
+
+  <div class="selectGrade" dir="rtl"
+  *ngIf="registerForm.get('role')?.value === 'teacher'">
+    <label for="roleSelector"> כיתה: </label>
+    <select id="role" formControlName="character">
+      <option >א</option>
+      <option >ב</option>
+      <option >ג</option>
+      <option >ד</option>
+      <option >ה</option>
+      <option >ו</option>
+    </select>
+  </div>
   
   
-  <default-button text="Register"></default-button>
+  <default-button text="הירשם"></default-button>
   
   <div class="login">
     Already a user? &nbsp;

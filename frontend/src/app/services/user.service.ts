@@ -63,6 +63,10 @@ export class UserService
     this.userSubject.next(new User()) 
     localStorage.removeItem(USER_KEY);
     window.location.reload();
+    this.toastrService.success(
+      `Welcome to Magnetic board !`,
+      'Login Successful'
+    )
   }
 
   private setUserToLocalStorage(user:User){
