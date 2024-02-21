@@ -12,6 +12,7 @@ export class LoginPageComponent {
   loginForm!:FormGroup;
   isSubmitted = false;
   returnUrl = '';
+  errorMessage='';
   constructor(private formBuilder:FormBuilder,
      private userService:UserService,
      private activatedRoute:ActivatedRoute,
@@ -39,8 +40,12 @@ export class LoginPageComponent {
     if(this.loginForm.invalid) return;
    this.userService.login({email:this.fc.email.value, password: this.fc.password.value})
    .subscribe(()=>{
+
       this.router.navigateByUrl(this.returnUrl);
    });
+
+   this.errorMessage = localStorage.getItem("ERROR") || "";
+
   } 
 }
 

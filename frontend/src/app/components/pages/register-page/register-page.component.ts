@@ -14,6 +14,7 @@ export class RegisterPageComponent implements OnInit {
 
   registerForm!:FormGroup;
   isSubmitted = false;
+  errorMessage='';
 
   returnUrl = '';
   constructor(
@@ -68,7 +69,10 @@ export class RegisterPageComponent implements OnInit {
 
     this.userService.register(user).subscribe(_ => {
       this.router.navigateByUrl(this.returnUrl);
-    })
+    });
+
+    this.errorMessage = localStorage.getItem("ERROR") || "";
+
   }
 
 }

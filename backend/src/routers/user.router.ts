@@ -31,7 +31,7 @@ router.post("/login", asyncHandler(
         res.send(generateTokenResponse(user));
        }
        else{
-         res.status(HTTP_BAD_REQUEST).send("Username or password is invalid!");
+         res.status(HTTP_BAD_REQUEST).send("אמייל או סיסמא לא תקינים");
        }
   
     }

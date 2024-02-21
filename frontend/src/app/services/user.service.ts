@@ -31,9 +31,13 @@ export class UserService
           this.toastrService.success(
             `Welcome to Magnetic board ${user.name}!`,
             'Login Successful'
-          )
+          );
+          localStorage.setItem("ERROR", "");
+
         },
         error: (errorResponse) => {
+          localStorage.setItem("ERROR", errorResponse.error);
+
           this.toastrService.error(errorResponse.error, 'Login Failed');
         }
       }));
@@ -53,6 +57,7 @@ export class UserService
         },
         error: (errorResponse) => {
           console.log("Register failed");
+          localStorage.setItem("ERROR", errorResponse.error);
 
           this.toastrService.error(errorResponse.error, 'Regsiter Failed');
         }

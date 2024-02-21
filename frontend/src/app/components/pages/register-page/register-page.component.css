@@ -35,7 +35,13 @@ select{
 
 .login{
     display: flex;
+    flex-direction: column;
+
     justify-content: center;
     align-items: center;
 }
 
+.errorMessage {
+    margin-top: 3rem;
+    color: red;
+}

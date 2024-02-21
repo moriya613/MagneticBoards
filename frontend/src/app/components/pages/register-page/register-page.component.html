@@ -46,7 +46,7 @@
   label="שם בית הספר">
   `</text-input>
 
-  
+
   <text-input
   *ngIf="registerForm.get('role')?.value === 'admin'"
   [control]="fc.address"
@@ -91,10 +91,15 @@
   <default-button text="הירשם"></default-button>
   
   <div class="login">
-    Already a user? &nbsp;
+    משתמש קיים? &nbsp;
     <a routerLink="/login" [queryParams]="{returnUrl: returnUrl}">
-      Login Here
+      התחבר כאן
     </a>
+
+    <div class="errorMessage" >
+      {{errorMessage}}
+  </div>
+
   </div>
   
   

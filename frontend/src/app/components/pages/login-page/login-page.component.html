@@ -20,13 +20,15 @@
         
 
             <default-button text="התחבר"></default-button>
-            <div class="errorMessage" >
-
-            </div>
+            
 
             <div class="register" dir="rtl">
                 מתשמש חדש? &nbsp;
                 <a routerLink="/register" [queryParams]="{returnUrl:returnUrl}"> הירשם כאן</a> 
+
+                <div class="errorMessage" >
+                    {{errorMessage}}
+                </div>
             </div>
 
         </form>
