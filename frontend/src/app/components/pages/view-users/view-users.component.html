@@ -1,0 +1,34 @@
+<app-title title=" רשימת משתמשים" margine="1.5rem 0 0 2.5rem"></app-title>
+
+<div class="titles" *ngFor="let str of titles">{{ str }}</div>
+<div class="container">
+   
+
+    <ul>
+        <li *ngFor="let user of users">
+            <div class="name">
+                {{user.name}}
+            </div>
+            <div class="email">
+                {{user.email}}
+            </div>
+            <div class="address">
+                {{user.address}} 
+            </div>
+            <div class="role">
+                {{user.role}} 
+            </div>
+           
+            <div class="schoolCode">
+                {{user.schoolCode}} 
+            </div>
+
+            <div>
+                <button class="remove-button" (click)="removeUser(user)">
+                    הסר
+                </button>
+            </div>
+
+        </li>
+    </ul>
+</div>

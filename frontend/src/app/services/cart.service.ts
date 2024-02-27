@@ -43,6 +43,12 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
+  changeBoardLength(width:number, height:number){
+    this.cart.height=height;
+    this.cart.width=width;
+    this.setCartToLocalStorage;
+  }
+
   clearCart(){
     this.cart = new Cart();
     this.setCartToLocalStorage();

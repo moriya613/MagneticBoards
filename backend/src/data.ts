@@ -78,26 +78,49 @@ export const sample_items: any[] = [
 
   ];
 
+
+
   export const sample_users: any[] = [
     {
-      name: "John Doe",
-      email: "john@gmail.com",
-      password: "12345",
-      address: "Toronto On",
-      isAdmin: true,
+      name: "Amnon Bariach",
+      email: "Amnon@gmail.com",
+      password: "613613",
+      address: "Ashdod",
+      isSuperAdmin: true,
+      role: "admin",
+      schoolCode: 7777
     },
     {
       name: "Jane Doe",
       email: "Jane@gmail.com",
-      password: "12345",
+      password: "123123",
       address: "Shanghai",
-      isAdmin: false,
+      isSuperAdmin: false,
+      role: "admin",
+      schoolCode: 1111
+
+
     },
     {
-      name: "יהונתן כהן",
-      email: "Jo@gmail.com",
-      password: "12345",
+      name: "יהונתן מנהל",
+      email: "JoA@gmail.com",
+      password: "123123",
       address: "Shanghai",
-      isAdmin: false,
+      isSuperAdmin: false,
+      role: "admin",
+      schoolCode: 2222
+
+
+    },
+    {
+      name: "יהונתן מורה",
+      email: "JoT@gmail.com",
+      password: "123123",
+      address: "Shanghai",
+      isSuperAdmin: false,
+      role: "teacher",
+      schoolCode: 2222
+
+
     },
   ];

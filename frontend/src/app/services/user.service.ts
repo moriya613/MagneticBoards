@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { HttpClient } from '@angular/common/http';
-import { USER_LOGIN_URL, USER_REGISTER_URL } from '../shared/constants/urls';
+import { USERS_URL, USER_LOGIN_URL, USER_REGISTER_URL, USER_REMOVE_URL } from '../shared/constants/urls';
 import { User } from '../shared/models/User';
 import { ToastrService } from 'ngx-toastr';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
@@ -20,6 +20,32 @@ export class UserService
   public userObservable:Observable<User>;
   constructor(private http:HttpClient, private toastrService:ToastrService) {
     this.userObservable = this.userSubject.asObservable();
+  }
+
+  getAll():Observable<User[]>{
+    return this.http.get<User[]>(USERS_URL);
+  }
+
+  removeUser(userLogin:IUserLogin):Observable<User>{
+    return this.http.post<User>(USER_REMOVE_URL, userLogin)
+     .pipe(
+      tap({
+        next: (user) =>{
+        
+          this.toastrService.success(
+            `user  ${user.name} removed successfully`,
+            'Removed successguly'
+          );
+          localStorage.setItem("ERROR", "");
+
+        },
+        error: (errorResponse) => {
+          localStorage.setItem("ERROR", errorResponse.error);
+
+          this.toastrService.error(errorResponse.error, 'removed failed');
+        }
+      }));
+
   }
 
   login(userLogin:IUserLogin):Observable<User>{

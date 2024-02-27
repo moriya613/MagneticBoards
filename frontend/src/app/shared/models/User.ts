@@ -3,6 +3,8 @@ export class User{
     email!:string;
     name!:string;
     address!:string;
+    schoolCode!:string;
     token!:string;
-    isAdmin!:boolean;
+    isSuperAdmin!:boolean;
+    role!:string;
 }

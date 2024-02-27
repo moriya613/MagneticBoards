@@ -23,6 +23,7 @@ import { DefaultButtonComponent } from './components/partials/default-button/def
 import { BoardComponent } from './components/partials/board/board.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import { ViewUsersComponent } from './components/pages/view-users/view-users.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { RegisterPageComponent } from './components/pages/register-page/register
     DefaultButtonComponent,
     BoardComponent,
     RegisterPageComponent,
+    ViewUsersComponent,
   ],
   imports: [
     BrowserModule,

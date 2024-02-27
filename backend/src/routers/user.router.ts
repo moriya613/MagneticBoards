@@ -20,6 +20,12 @@ router.get("/seed",asyncHandler(
     }
 ))
 
+router.get("/",asyncHandler(async (req,res) => {
+  console.log("inside get all users")
+  const users = await UserModel.find();
+  res.send(users);
+}))
+
 router.post("/login", asyncHandler(
     async (req, res) => {
       console.log("inside login");
@@ -37,6 +43,22 @@ router.post("/login", asyncHandler(
     }
   ))
 
+  router.post("/remove", asyncHandler(
+    async (req, res) => {
+      console.log("remove-user");
+      const {email} = req.body;
+      try{
+        await UserModel.deleteOne({email});
+        res.status(200).json({ message: 'User removed successfully' });
+        console.log(`User with email '${email}' removed successfully.`);
+
+      } catch(err) {
+          res.status(HTTP_BAD_REQUEST).send("Error while removing user");
+          console.error('Error while removing user:', err);
+      }
+      
+    }));
+
   router.post('/register', asyncHandler(
     
     async (req, res) => {
@@ -45,6 +67,7 @@ router.post("/login", asyncHandler(
 
         const {name, email, password, address, schoolName, schoolCode, grade , charactter, role} = req.body;
         const user = await UserModel.findOne({email});
+
         if(user){
           console.log("user exist");
             res.status(HTTP_BAD_REQUEST)
@@ -52,6 +75,16 @@ router.post("/login", asyncHandler(
             return;
         }
 
+        if(role=="teacher"){
+          const user = await UserModel.findOne({schoolCode, role:"admin"});
+          if(!user){
+            console.log("school code not exist");
+            res.status(HTTP_BAD_REQUEST)
+            .send ('קוד מוסד לא קיים במערכת');
+            return;
+          }
+
+        }
         const encryptedPassword = await bcrypt.hash(password, 10);
         const newUser:User = {
             id:'',

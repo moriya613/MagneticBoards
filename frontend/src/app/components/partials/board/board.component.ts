@@ -14,7 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class BoardComponent {
   cart!:Cart;
   heightOfBoard = 10; 
-  widthOfBoard:number = 20; // Variable to store user input as a number
+  widthOfBoard:number = 10; // Variable to store user input as a number
 
 
   heightOptions: number[] = [1,1.5,2];
@@ -24,12 +24,18 @@ export class BoardComponent {
 
   constructor(private cartService:CartService){
     this.cartService.getCartObservable().subscribe((cart) => this.cart = cart);
+    if(this.cart.height)    this.heightOfBoard = this.cart.height;
+    if (this.cart.width)    this.widthOfBoard = this.cart.width;
   }
 
   public onDragEnded(event: CdkDragEnd, imageUrl:string): void {
    
     this.cartService.changePosition(imageUrl,event.source.getFreeDragPosition());
     
+  }
+
+  public onSelectChange(event: any): void {
+    this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);
   }
 
 }

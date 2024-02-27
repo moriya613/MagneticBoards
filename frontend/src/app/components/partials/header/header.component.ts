@@ -32,4 +32,12 @@ export class HeaderComponent {
     return this.user.token;
   }
 
+  get isAdmin(){
+    return this.user.role == "admin";
+  }
+
+  get isSuperAdmin(){
+    return this.user.isSuperAdmin;
+  }
+
 }
