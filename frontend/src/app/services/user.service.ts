@@ -110,7 +110,7 @@ export class UserService
     if(userJson) return JSON.parse(userJson) as User;
   } catch(exception)
   {
-    console.log("ERROR");
+    console.log("ERROR123");
   }
   
     return new User();

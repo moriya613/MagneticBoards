@@ -1,0 +1,17 @@
+ERROR123
+ERROR123
+ERROR123
+ERROR123
+ERROR123
+ERROR123
+Prerendered 5 static routes.
+
+
+Initial Chunk Files   | Names         |  Raw Size | Estimated Transfer Size
+main-V475TT6I.js      | main          | 462.08 kB |               112.65 kB
+styles-2JCGPPBC.css   | styles        |  72.41 kB |                 8.14 kB
+polyfills-RX4V3J3S.js | polyfills     |  33.01 kB |                10.68 kB
+
+                      | Initial Total | 567.50 kB |               131.46 kB
+
+Application bundle generation complete. [14.668 seconds]

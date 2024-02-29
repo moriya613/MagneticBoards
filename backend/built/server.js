@@ -18,7 +18,7 @@ app.use((0, cors_1.default)({
     credentials: true,
     origin: ["http://localhost:4200"]
 }));
-app.use("/api/foods", items_router_1.default);
+app.use("/api/items", items_router_1.default);
 app.use("/api/users", user_router_1.default);
 app.use(express_1.default.static('public'));
 app.get('*', function (req, res) {
