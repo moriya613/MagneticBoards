@@ -51,10 +51,16 @@
 }
 
 
-  .niceSelect{
+  .widthSelect{
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: 3rem;
+}
+
+.lengthSelect{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 3rem;
 }
 
 select{

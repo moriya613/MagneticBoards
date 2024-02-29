@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
 import { Cart } from '../../../shared/models/Cart';
 import { CdkDragEnd } from '@angular/cdk/drag-drop';
@@ -12,13 +12,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './board.component.css'
 })
 export class BoardComponent {
+
+  @ViewChild('widthSelect') widthSelect!: ElementRef;
+  @ViewChild('lengthSelect') lengthSelect!: ElementRef;
+
+
   cart!:Cart;
   heightOfBoard = 10; 
   widthOfBoard:number = 10; // Variable to store user input as a number
 
 
-  heightOptions: number[] = [1,1.5,2];
-  widthOptions: number[] = [1,1.5,2];
+  heightOptions: number[] = [1,1.5,1.7,2];
+  widthOptions: number[] = [1,1.5,1.7, 2];
 
 
 
@@ -35,7 +40,11 @@ export class BoardComponent {
   }
 
   public onSelectChange(event: any): void {
+    this.widthOfBoard = this.widthSelect.nativeElement.value ;
+    this.heightOfBoard = this.lengthSelect.nativeElement.value ;
     this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);
+   
+    
   }
 
 }

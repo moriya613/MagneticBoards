@@ -1,6 +1,6 @@
 <div class="container" dir="ltr">
         <div class="custom-select">
-            <select id="niceSelect" [value]="widthOfBoard" (change)="onSelectChange($event)">
+            <select #widthSelect id="widthSelect" [value]="widthOfBoard" (change)="onSelectChange($event)">
                 <option *ngFor="let option of widthOptions" [value]="option *10">{{ option }}</option>
             </select>
             <label class="niceSelect"> 
@@ -10,7 +10,7 @@
         </div>
    
     <div class="custom-select">
-        <select id="niceSelect" [value]="heightOfBoard" (change)="onSelectChange($event)">
+        <select #lengthSelect id="lengthSelect" [value]="heightOfBoard" (change)="onSelectChange($event)">
             <option *ngFor="let option of heightOptions" [value]="option * 10">{{ option }}</option>
         </select>
             <label class="niceSelect"> 
