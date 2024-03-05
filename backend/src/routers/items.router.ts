@@ -18,11 +18,13 @@ router.get("/seed",asyncHandler(
 ))
 
 router.get("/",asyncHandler(async (req,res) => {
+    console.log("inside get all items");
     const items = await ItemModel.find();
     res.send(items);
 }))
 
 router.get("/search/:searchTerm", asyncHandler(async (req,res) => {
+    console.log("insode search");
     const searchRegex = new RegExp(req.params.searchTerm, 'i');
     const items = await ItemModel.find({name: {$regex:searchRegex}});
     res.send(items);
