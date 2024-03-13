@@ -18,7 +18,7 @@ export class BoardComponent {
 
 
   cart!:Cart;
-  heightOfBoard = 10; 
+  heightOfBoard:number = 10; 
   widthOfBoard:number = 10; // Variable to store user input as a number
 
 
@@ -37,6 +37,7 @@ export class BoardComponent {
    
     this.cartService.changePosition(imageUrl,event.source.getFreeDragPosition());
     
+
   }
 
   public onSelectChange(event: any): void {

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="content">
+      <app-title title="פרטי הזמנה" fontSize="1.6rem"></app-title>
+      <div class="summary" dir="rtl">
+        <div>
+            <h3>שם</h3>
+            <span>{{order.name}}</span>
+        </div>
+        <div>
+            <h3>כתובת</h3>
+            <span>{{order.address}}</span>
+        </div>
+      </div>
+      <order-items-list [order]="order"></order-items-list>
+
+    </div>
+    <div class="board">
+        <app-title
+        title=" "
+        fontSize="1.6rem"></app-title>
+      </div>
+
+      <div class="buttons-container">
+        <div class="buttons">
+          <paypal-button [order]="order">
+
+          </paypal-button>
+        </div>
+      </div>
+    </div>

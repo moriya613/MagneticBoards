@@ -1,0 +1,39 @@
+<table>
+    <tr>
+        <td colspan="5">
+            <h3>מוצרים בהזמנה</h3>
+        </td>
+    </tr>
+    <tr *ngFor="let orderItem of order.items">
+        <td>
+          <a routerLink="/items/{{orderItem.item.id}}">
+            <img [src]="orderItem.item.imageUrl"/>
+          </a>
+        </td>
+        <td>
+          {{orderItem.item.name}}
+        </td>
+        <td>
+          &#8362;{{orderItem.item.price}}
+        </td>
+        <td>
+          {{orderItem.quantity}}
+        </td>
+        <td>
+          &#8362;{{orderItem.price}}
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td>
+          <strong>
+            סך הכל 
+          </strong>
+        </td>
+        <td>
+          <strong>
+            &#8362;{{order.totalPrice}}
+          </strong>
+        </td>
+      </tr>
+</table>

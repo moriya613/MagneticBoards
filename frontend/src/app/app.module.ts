@@ -12,7 +12,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { SearchComponent } from './components/partials/search/search.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
 //import { RatingModule } from 'ng-starrating';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
@@ -24,44 +24,57 @@ import { BoardComponent } from './components/partials/board/board.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { ViewUsersComponent } from './components/pages/view-users/view-users.component';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    ItemPageComponent,
-    CartPageComponent,
-    TitleComponent,
-    SearchComponent,
-    TagsComponent,
-    LoginPageComponent,
-    InputContainerComponent,
-    InputValidationComponent,
-    TextInputComponent,
-    DefaultButtonComponent,
-    BoardComponent,
-    RegisterPageComponent,
-    ViewUsersComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    DragDropModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
-    ToastrModule.forRoot(
-      {
-      timeOut:5000,
-      positionClass: 'toast-buttom-right',
-      newestOnTop: false
-    })
-    //RatingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        HomeComponent,
+        ItemPageComponent,
+        CartPageComponent,
+        TitleComponent,
+        SearchComponent,
+        TagsComponent,
+        LoginPageComponent,
+        InputContainerComponent,
+        InputValidationComponent,
+        TextInputComponent,
+        DefaultButtonComponent,
+        BoardComponent,
+        RegisterPageComponent,
+        ViewUsersComponent,
+        CheckoutPageComponent,
+        OrderItemsListComponent,
+        PaymentPageComponent,
+        PaypalButtonComponent
+
+
+    ],
+    providers: [
+        {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }
+    ],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        DragDropModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule,
+        ToastrModule.forRoot({
+            timeOut: 5000,
+            positionClass: 'toast-buttom-right',
+            newestOnTop: false
+        })
+        //RatingModule
+        
+    ]
 })
 export class AppModule { }

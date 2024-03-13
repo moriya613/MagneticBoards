@@ -48,6 +48,10 @@ export class UserService
 
   }
 
+  public get currentUser():User{
+    return this.userSubject.value;
+  }
+
   login(userLogin:IUserLogin):Observable<User>{
     return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
       tap({
