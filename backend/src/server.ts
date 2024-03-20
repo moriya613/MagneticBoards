@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     credentials:true,
-    origin:["http://localhost:4200", "http://localhost:1000", "http://localhost:5000"]
+    origin:["http://localhost:4200", "http://localhost:1000", "http://localhost:5000", "https://magneticboards.onrender.com"]
 }));
 
 app.use("/api/items", itemsRouter);
