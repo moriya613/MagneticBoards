@@ -1,0 +1,25 @@
+<div class="container" dir="rtl" >
+    <div class="content" *ngFor="let order of orders" >
+
+        <h2> הזמנה מספר: {{order.id}}</h2>
+        <div class="details">
+            <div>
+                <strong> תאריך</strong>   {{order.createdAt  | date:'medium'}}
+            </div>
+
+            <div>
+                <strong> שם</strong>   {{order.name}}
+            </div>
+
+            <div>
+                <strong> כתובת</strong>   {{order.address}}
+            </div>
+
+            <div>
+                <strong> סטטוס</strong>   {{order.status}}
+            </div>
+        </div>
+
+        <order-items-list [order]="order"></order-items-list>
+    </div>
+</div>

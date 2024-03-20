@@ -9,4 +9,7 @@ import { Order } from '../../../shared/models/Order';
 export class OrderItemsListComponent {
 @Input()
 order!:Order;
+
+constructor() {
+}
 }

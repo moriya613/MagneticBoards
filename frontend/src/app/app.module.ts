@@ -29,6 +29,9 @@ import { OrderItemsListComponent } from './components/partials/order-items-list/
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
+import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
+import { MyBoardsComponent } from './components/pages/my-boards/my-boards.component';
+import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/orders-to-confirm.component';
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import { PaypalButtonComponent } from './components/partials/paypal-button/paypa
         CheckoutPageComponent,
         OrderItemsListComponent,
         PaymentPageComponent,
-        PaypalButtonComponent
+        PaypalButtonComponent,
+        OrderTrackPageComponent,
+        MyBoardsComponent,
+        OrdersToConfirmComponent
 
 
     ],

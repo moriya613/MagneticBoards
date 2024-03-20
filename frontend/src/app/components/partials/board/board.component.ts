@@ -28,6 +28,8 @@ export class BoardComponent {
 
 
   constructor(private cartService:CartService){
+    this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);
+
     this.cartService.getCartObservable().subscribe((cart) => this.cart = cart);
     if(this.cart.height)    this.heightOfBoard = this.cart.height;
     if (this.cart.width)    this.widthOfBoard = this.cart.width;

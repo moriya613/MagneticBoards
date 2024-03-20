@@ -55,17 +55,21 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-right: 3rem;
+    margin-left: 3rem;
+
 }
 
 .lengthSelect{
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: 3rem;
+  margin-left: 3rem;
+
 }
 
 select{
     width: 5rem;
-    height: 2.5rem;
+    height: 1.5rem;
     
     outline: 1.8px solid rgb(228, 182, 182);
     border-radius: 0.5rem;
@@ -76,6 +80,8 @@ select{
   }
 
   label {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-right: 1.5rem;
+
 
   }

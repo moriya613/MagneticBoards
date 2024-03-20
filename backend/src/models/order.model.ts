@@ -39,6 +39,7 @@ export const LatLngSchema = new Schema<LatLng>(
         widthOfBoard:number;
         heightOfBoard:number;
         user: Types.ObjectId;
+        schoolCode: string;
         createdAt:Date;
         updatedAt:Date;
     
@@ -53,6 +54,7 @@ export const LatLngSchema = new Schema<LatLng>(
             items: {type:[OrderItemSchema], required:true},
             status: {type: String, default:OrderStatus.NEW},
             user: {type: Schema.Types.ObjectId},
+            schoolCode: {type:String},
             widthOfBoard: {type:Number, required:false},
             heightOfBoard: {type:Number, required:false}
         }, {

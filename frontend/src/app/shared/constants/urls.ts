@@ -21,5 +21,11 @@ export const USER_REMOVE_URL = BASE_URL + '/api/users/remove';
 
 export const ORDERS_URL = BASE_URL + '/api/orders';
 export const ORDER_CREATE_URL = ORDERS_URL + '/create';
+export const ORDER_CHANGE_STATUS_TO_APPROVE = ORDERS_URL + '/changeStatusToApprove'
+export const ORDER_NEW_FOR_CURRENT_SCHOOL_CODE = ORDERS_URL + '/newOrdersForCurrentSchoolCode';
+export const ORDER_FOR_CURRENT_USER_URL = ORDERS_URL + '/OrdersForCurrentUser';
+
 export const ORDER_NEW_FOR_CURRENT_USER_URL = ORDERS_URL + '/newOrderForCurrentUser';
+
 export const ORDER_PAY_URL = ORDERS_URL + '/pay';
+export const ORDER_TRACK_URL = ORDERS_URL + '/track/';

@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class CheckoutPageComponent implements OnInit {
   order:Order = new Order();
   checkoutForm!: FormGroup;
-  constructor(cartService:CartService,
+  constructor(private cartService:CartService,
               private formBuilder: FormBuilder,
               private userService: UserService,
               private toastrService: ToastrService,
@@ -36,8 +36,40 @@ export class CheckoutPageComponent implements OnInit {
     });
   }
 
+  get isAdmin () {
+    return this.userService.currentUser.role === 'admin';
+  }
+
   get fc(){
     return this.checkoutForm.controls;
+  }
+
+  private getFromLocalStorage():Order[]{
+    try{
+    const orders = localStorage.getItem('selectedOrders');
+    if(orders) return JSON.parse(orders) as Order[];
+  } catch(exception)
+  {
+    console.log("ERROR123");
+  }
+  
+    return [];
+  }
+
+  changeOrdersStatus() {
+    const orders = this.getFromLocalStorage();
+    orders.forEach(order =>  this.orderService.changeStatusToApproved(order).subscribe({
+      next:()=>{
+
+        console.log("V")
+        
+      },
+      error: (errorResponse) => {
+        console.log("X")
+
+      }
+    }))
+  
   }
 
   createOrder(){
@@ -48,10 +80,15 @@ export class CheckoutPageComponent implements OnInit {
 
     this.order.name = this.fc.name.value;
     this.order.address = this.fc.address.value;
-
+    this.order.schoolCode = this.userService.currentUser.schoolCode;
     this.orderService.create(this.order).subscribe({
       next:()=>{
-        this.router.navigateByUrl('/payment');
+        this.cartService.clearCart();
+
+        this.changeOrdersStatus();
+
+        if(this.isAdmin) this.router.navigateByUrl('/payment');
+        else this.router.navigateByUrl('/');
       },
       error: (errorResponse) => {
         this.toastrService.error(errorResponse.error, 'Cart');
@@ -60,3 +97,5 @@ export class CheckoutPageComponent implements OnInit {
 
   }
 }
+
+

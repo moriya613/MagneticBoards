@@ -15,8 +15,13 @@ export class CartService {
 
   addToCart(item:Item): void{
     let cartItem = this.cart.items.find(x => x.item.id == item.id);
-    if(cartItem)
+    if(cartItem) {
+      let index = this.cart.items.indexOf(cartItem);
+      this.cart.items[index].quantity= this.cart.items[index].quantity+1;
+      this.setCartToLocalStorage();
+
       return;
+    }
     this.cart.items.push(new CartItem(item));
     this.setCartToLocalStorage();
   }
@@ -64,7 +69,7 @@ export class CartService {
 
   private setCartToLocalStorage(): void {
     this.cart.totalPrice = this.cart.items
-      .reduce((prevSum, currentItem) => prevSum + currentItem.price, 0);
+      .reduce((prevSum, currentItem) => prevSum + currentItem.price * currentItem.quantity, 0);
     this.cart.totalCount = this.cart.items
       .reduce((prevSum, currentItem) => prevSum + currentItem.quantity, 0);
 
