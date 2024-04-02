@@ -9,8 +9,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/100Board.png',
       tags: ['חשבון'],
-      width: 80,
-      length: 100,
+      width: 8,
+      length: 10,
       schoolCharacter: 'ממד'
     },
     {
@@ -21,8 +21,8 @@ export const sample_items: Item[] = [
       uses: 7,
       imageUrl: 'assets/Elul.png',
       tags: ['יהדות'],
-      width: 170,
-      length: 150,
+      width: 17,
+      length: 15,
       schoolCharacter: 'ממד'
 
     },
@@ -34,8 +34,8 @@ export const sample_items: Item[] = [
       uses: 3,
       imageUrl: 'assets/letters.png',
       tags: ['תורה'],
-      width: 100,
-      length: 100,
+      width: 10,
+      length: 10,
       schoolCharacter: 'ממד'
 
     },
@@ -47,8 +47,8 @@ export const sample_items: Item[] = [
       uses: 3,
       imageUrl: 'assets/MaBakalmar.png',
       tags: ['כללי'],
-      width: 120,
-      length: 120,
+      width: 12,
+      length: 12,
       schoolCharacter: 'ממד'
 
     },
@@ -60,8 +60,8 @@ export const sample_items: Item[] = [
       uses: 0,
       imageUrl: 'assets/MathTitle.png',
       tags: ['חשבון'],
-      width: 100,
-      length: 50 ,   
+      width: 10,
+      length: 5 ,   
       schoolCharacter: 'ממד'
     },
 
@@ -73,8 +73,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/WriteProdct.png',
       tags: ['עברית'],
-      width: 70,
-      length: 70,
+      width: 7,
+      length: 7,
       schoolCharacter: 'ממד'
 
     },
@@ -86,8 +86,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/Birthday.jpg',
       tags: ['כללי'],
-      width: 50,
-      length: 70,
+      width: 5,
+      length: 7,
       schoolCharacter: 'ממד'
 
     },
@@ -100,8 +100,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/EngLetters.jpg',
       tags: ['אנגלית'],
-      width: 70,
-      length: 50,
+      width: 7,
+      length: 5,
       schoolCharacter: 'ממד'
 
     },
@@ -114,8 +114,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/GirlBaloon.jpg',
       tags: ['כללי'],
-      width: 70,
-      length: 50,
+      width: 7,
+      length: 5,
       schoolCharacter: 'ממד'
 
     },
@@ -128,8 +128,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/Hebrew2.jpg',
       tags: ['עברית'],
-      width: 70,
-      length: 50,
+      width: 7,
+      length: 5,
       schoolCharacter: 'ממד'
 
     },
@@ -141,8 +141,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/longU.jpg',
       tags: ['אנגלית'],
-      width: 40,
-      length: 70,
+      width: 4,
+      length: 7,
       schoolCharacter: 'חרדי'
 
     },
@@ -154,8 +154,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/NumbersHouse.jpg',
       tags: ['חשבון'],
-      width: 50,
-      length: 50,
+      width: 5,
+      length: 5,
       schoolCharacter: 'חרדי'
 
     },
@@ -168,8 +168,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/PlusMath.jpg',
       tags: ['חשבון'],
-      width: 50,
-      length: 50,
+      width: 5,
+      length: 5,
       schoolCharacter: 'ממלכתי'
 
     },
@@ -182,8 +182,8 @@ export const sample_items: Item[] = [
       uses: 4,
       imageUrl: 'assets/Time.jpg',
       tags: ['עברית'],
-      width: 50,
-      length: 50,
+      width: 5,
+      length: 5,
       schoolCharacter: 'ממלכתי'
 
     },

@@ -18,17 +18,17 @@ export class BoardComponent {
 
 
   cart!:Cart;
-  heightOfBoard:number = 10; 
+  heightOfBoard:number = 12; 
   widthOfBoard:number = 10; // Variable to store user input as a number
 
 
-  heightOptions: number[] = [1,1.5,1.7,2];
-  widthOptions: number[] = [1,1.5,1.7, 2];
+  widthOptions: number[] = [1, 1.2, 1.5, 2, 2.2, 2.4, 2.7, 3, 3.2, 3.5, 4, 4.4, 4.6, 4.8];
 
 
 
   constructor(private cartService:CartService){
-    this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);
+
+    //this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);
 
     this.cartService.getCartObservable().subscribe((cart) => this.cart = cart);
     if(this.cart.height)    this.heightOfBoard = this.cart.height;
@@ -44,7 +44,6 @@ export class BoardComponent {
 
   public onSelectChange(event: any): void {
     this.widthOfBoard = this.widthSelect.nativeElement.value ;
-    this.heightOfBoard = this.lengthSelect.nativeElement.value ;
     this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);
    
     

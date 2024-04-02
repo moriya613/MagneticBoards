@@ -1,25 +1,13 @@
 <div class="container" dir="ltr">
         <div class="custom-select">
-            <select #widthSelect id="widthSelect" [value]="widthOfBoard" (change)="onSelectChange($event)">
-                <option *ngFor="let option of widthOptions" [value]="option *10">{{ option }}</option>
+            <select #widthSelect id="widthSelect" [(ngModel)]="widthOfBoard" (change)="onSelectChange($event)">
+                <option *ngFor="let option of widthOptions" [value]="option *10" >{{ option }}</option>
             </select>
             <label class="niceSelect" > 
               בחר רוחב לוח (מטרים)</label>
 
             
         </div>
-   
-    <div class="custom-select">
-        <select #lengthSelect id="lengthSelect" [value]="heightOfBoard" (change)="onSelectChange($event)">
-            <option *ngFor="let option of heightOptions" [value]="option * 10">{{ option }}</option>
-        </select>
-            <label class="niceSelect"> 
-              בחר אורך לוח (מטרים)  </label>
-
-        
-    </div>
-
-
   </div>
 
 
