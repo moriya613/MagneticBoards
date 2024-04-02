@@ -25,7 +25,7 @@ ul{
   }
   
   li a img{
-    object-fit: cover;
+    object-fit: fill;
     height: 14.5rem;
   }
   

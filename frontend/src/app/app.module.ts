@@ -32,6 +32,7 @@ import { PaypalButtonComponent } from './components/partials/paypal-button/paypa
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { MyBoardsComponent } from './components/pages/my-boards/my-boards.component';
 import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/orders-to-confirm.component';
+import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/o
         PaypalButtonComponent,
         OrderTrackPageComponent,
         MyBoardsComponent,
-        OrdersToConfirmComponent
+        OrdersToConfirmComponent,
+        ViewOrdersComponent
 
 
     ],

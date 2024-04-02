@@ -28,3 +28,9 @@ form{
     margin-top: 3rem;
     color: red;
 }
+
+img {
+    width:70px;
+    height: auto;
+    border-radius: 1rem;
+}

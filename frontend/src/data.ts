@@ -9,7 +9,7 @@ export const sample_items: Item[] = [
       favorite: false,
       uses: 4,
       imageUrl: 'assets/100Board.png',
-      tags: ['חשבון', 'מתמטיקה'],
+      tags: ['חשבון'],
       width: 80,
       length: 100
     },
@@ -20,7 +20,7 @@ export const sample_items: Item[] = [
       favorite: true,
       uses: 7,
       imageUrl: 'assets/Elul.png',
-      tags: ['חגים', 'תשרי'],
+      tags: ['כללי'],
       width: 170,
       length: 150
     },
@@ -31,7 +31,7 @@ export const sample_items: Item[] = [
       favorite: false,
       uses: 3,
       imageUrl: 'assets/letters.png',
-      tags: ['אותיות', 'כיתה א'],
+      tags: ['עברית'],
       width: 100,
       length: 100
     },
@@ -42,7 +42,7 @@ export const sample_items: Item[] = [
       favorite: true,
       uses: 3,
       imageUrl: 'assets/MaBakalmar.png',
-      tags: ['כיתה א'],
+      tags: ['כללי'],
       width: 120,
       length: 120
     },
@@ -53,7 +53,7 @@ export const sample_items: Item[] = [
       favorite: false,
       uses: 0,
       imageUrl: 'assets/MathTitle.png',
-      tags: ['חשבון', 'מתמטיקה'],
+      tags: ['חשבון'],
       width: 100,
       length: 50    },
     {
@@ -63,20 +63,110 @@ export const sample_items: Item[] = [
       favorite: false,
       uses: 4,
       imageUrl: 'assets/WriteProdct.png',
-      tags: ['עברית', 'שפה'],
+      tags: ['עברית'],
       width: 70,
       length: 70
+    },
+    {
+      id:'7',
+      name: 'יש לי יום הולדת',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/Birthday.jpg',
+      tags: ['כללי'],
+      width: 50,
+      length: 70
+    },
+
+    {
+      id:'8',
+      name: 'אותיות באנגלית',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/EngLetters.jpg',
+      tags: ['אנגלית'],
+      width: 70,
+      length: 50
+    },
+
+    {
+      id:'9',
+      name: 'ילדה בלון',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/GirlBaloon.jpg',
+      tags: ['כללי'],
+      width: 70,
+      length: 50
+    },
+
+    {
+      id:'10',
+      name: ' עלילה',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/Hebrew2.jpg',
+      tags: ['עברית'],
+      width: 70,
+      length: 50
+    },
+    {
+      id:'11',
+      name: ' Long U',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/longu.jpg',
+      tags: ['אנגלית'],
+      width: 40,
+      length: 70
+    },
+    {
+      id:'12',
+      name: 'בית המספרים',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/NumbersHouse.jpg',
+      tags: ['חשבון'],
+      width: 50,
+      length: 50
+    },
+
+    {
+      id:'13',
+      name: ' תרגיל חיבור',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/PlusMath.jpg',
+      tags: ['חשבון'],
+      width: 50,
+      length: 50
+    },
+
+    {
+      id:'14',
+      name: ' זמן',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/Time.jpg',
+      tags: ['עברית'],
+      width: 50,
+      length: 50
     },
   ];
 
   export const sample_tags: Tag[] = [
     {name:'חשבון', count:2},
-    {name:'חגים', count:2},
-    {name:'תשרי', count:2},
-    {name:'אותיות', count:2},
-    {name:'כיתה א', count:2},
-    {name:'מתמטיקה', count:2},
-    {name:'שפה', count:1},
-    {name:'עברית', count:1}
-
+    {name:'אנגלית', count:2},
+    {name:'יום הולדת', count:2},
+    {name:'עברית', count:2},
+    {name:' כללי', count:2},
+    {name:'תורה', count:2}
   ]

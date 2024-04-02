@@ -1,5 +1,6 @@
 <div *ngIf="tags">
     <a *ngFor="let tag of tags" routerLink="/tag/{{tag.name}}">
-      {{tag.name}}({{tag.count}})
+
+      <img src="/assets/{{tag.name}}.png">
     </a>
   </div>

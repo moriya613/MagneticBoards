@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { sample_items, sample_tags } from '../data';
+import { sample_items } from '../data';
 import asyncHandler from 'express-async-handler';
 import { ItemModel } from '../models/item.model';
 const router = Router();
@@ -9,9 +9,12 @@ router.get("/seed",asyncHandler(
     async (req,res) => {
         const itemCount = await ItemModel.countDocuments();
         if(itemCount > 0 ){
+            console.log("there is more than 0 items in db")
             res.send("Seed is already done!");
             return;
         }
+        console.log("there is  0 items in db")
+
         await ItemModel.create(sample_items);
         res.send("Seed Is Done");
     }

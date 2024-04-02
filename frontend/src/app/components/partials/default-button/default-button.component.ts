@@ -18,6 +18,10 @@ export class DefaultButtonComponent {
   fontSizeRem = 1.3;
   @Input()
   widthRem = 12;
+  @Input()
+  imgSrc = '';
+  @Input()
+  imgWidth = '';
   @Output()
   onClick = new EventEmitter();
 

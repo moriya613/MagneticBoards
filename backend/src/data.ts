@@ -1,4 +1,6 @@
-export const sample_items: any[] = [
+import { Item } from "./models/item.model";
+
+export const sample_items: Item[] = [
     {
       id:'1',
       name: 'לוח ה100',
@@ -6,20 +8,23 @@ export const sample_items: any[] = [
       favorite: false,
       uses: 4,
       imageUrl: 'assets/100Board.png',
-      tags: ['חשבון', 'מתמטיקה'],
-      width: 5,
-      length: 5
+      tags: ['חשבון'],
+      width: 80,
+      length: 100,
+      schoolCharacter: 'ממד'
     },
     {
       id:'2',
-      name: 'ELUL',
+      name: 'אלול',
       price: 20,
       favorite: true,
       uses: 7,
       imageUrl: 'assets/Elul.png',
-      tags: ['חגים', 'תשרי'],
-      width: 5,
-      length: 5
+      tags: ['יהדות'],
+      width: 170,
+      length: 150,
+      schoolCharacter: 'ממד'
+
     },
     {
       id:'3',
@@ -28,9 +33,11 @@ export const sample_items: any[] = [
       favorite: false,
       uses: 3,
       imageUrl: 'assets/letters.png',
-      tags: ['אותיות', 'כיתה א'],
-      width: 5,
-      length: 5
+      tags: ['תורה'],
+      width: 100,
+      length: 100,
+      schoolCharacter: 'ממד'
+
     },
     {
       id:'4',
@@ -39,9 +46,11 @@ export const sample_items: any[] = [
       favorite: true,
       uses: 3,
       imageUrl: 'assets/MaBakalmar.png',
-      tags: ['כיתה א'],
-      width: 5,
-      length: 5
+      tags: ['כללי'],
+      width: 120,
+      length: 120,
+      schoolCharacter: 'ממד'
+
     },
     {
       id:'5',
@@ -50,9 +59,12 @@ export const sample_items: any[] = [
       favorite: false,
       uses: 0,
       imageUrl: 'assets/MathTitle.png',
-      tags: ['חשבון', 'מתמטיקה'],
-      width: 2,
-      length: 5    },
+      tags: ['חשבון'],
+      width: 100,
+      length: 50 ,   
+      schoolCharacter: 'ממד'
+    },
+
     {
       id:'6',
       name: 'תוצרי כתיבה',
@@ -60,24 +72,122 @@ export const sample_items: any[] = [
       favorite: false,
       uses: 4,
       imageUrl: 'assets/WriteProdct.png',
-      tags: ['עברית', 'שפה'],
-      width: 3,
-      length: 1
+      tags: ['עברית'],
+      width: 70,
+      length: 70,
+      schoolCharacter: 'ממד'
+
+    },
+    {
+      id:'7',
+      name: 'יש לי יום הולדת',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/Birthday.jpg',
+      tags: ['כללי'],
+      width: 50,
+      length: 70,
+      schoolCharacter: 'ממד'
+
+    },
+
+    {
+      id:'8',
+      name: 'אותיות באנגלית',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/EngLetters.jpg',
+      tags: ['אנגלית'],
+      width: 70,
+      length: 50,
+      schoolCharacter: 'ממד'
+
+    },
+
+    {
+      id:'9',
+      name: 'ילדה בלון',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/GirlBaloon.jpg',
+      tags: ['כללי'],
+      width: 70,
+      length: 50,
+      schoolCharacter: 'ממד'
+
+    },
+
+    {
+      id:'10',
+      name: ' עלילה',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/Hebrew2.jpg',
+      tags: ['עברית'],
+      width: 70,
+      length: 50,
+      schoolCharacter: 'ממד'
+
+    },
+    {
+      id:'11',
+      name: ' Long U',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/longU.jpg',
+      tags: ['אנגלית'],
+      width: 40,
+      length: 70,
+      schoolCharacter: 'חרדי'
+
+    },
+    {
+      id:'12',
+      name: 'בית המספרים',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/NumbersHouse.jpg',
+      tags: ['חשבון'],
+      width: 50,
+      length: 50,
+      schoolCharacter: 'חרדי'
+
+    },
+
+    {
+      id:'13',
+      name: ' תרגיל חיבור',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/PlusMath.jpg',
+      tags: ['חשבון'],
+      width: 50,
+      length: 50,
+      schoolCharacter: 'ממלכתי'
+
+    },
+
+    {
+      id:'14',
+      name: ' זמן',
+      price: 9,
+      favorite: false,
+      uses: 4,
+      imageUrl: 'assets/Time.jpg',
+      tags: ['עברית'],
+      width: 50,
+      length: 50,
+      schoolCharacter: 'ממלכתי'
+
     },
   ];
-
-  export const sample_tags: any[] = [
-    {name:'חשבון', count:2},
-    {name:'חגים', count:2},
-    {name:'תשרי', count:2},
-    {name:'אותיות', count:2},
-    {name:'כיתה א', count:2},
-    {name:'מתמטיקה', count:2},
-    {name:'שפה', count:1},
-    {name:'עברית', count:1}
-
-  ];
-
 
 
   export const sample_users: any[] = [
@@ -124,3 +234,5 @@ export const sample_items: any[] = [
 
     },
   ];
+
+  

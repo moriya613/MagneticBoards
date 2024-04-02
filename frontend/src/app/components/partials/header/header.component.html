@@ -4,17 +4,19 @@
       <nav>
         <ul>
           <li *ngIf="!isAuth">
-            <a routerLink="/login" >התחברות</a>
+            <a routerLink="/login" >
+              <img src="/assets/login.png"/>
+            </a>
   
           </li>
           <li  *ngIf="isAuth" class = "menu-container">
-            <a routerLink="/dascoard" >{{user.name}}</a>
+            <a routerLink="/dascoard"  >{{user.name}} </a>
             <div class="menu">
               <a routerLink="/profile" >פרופיל</a>
               <a routerLink="/my-boards"  > ההזמנות שלי</a>
               <a routerLink="/ordersToConfirm" *ngIf="isAdmin">הזמנות לאישור</a>
               <a routerLink="/view-users" *ngIf="isSuperAdmin">הצג משתמשים</a>
-              <a routerLink="/orders" *ngIf="isSuperAdmin">הצג הזמנות</a>
+              <a routerLink="/view-orders" *ngIf="isSuperAdmin">הצג הזמנות</a>
               <a routerLink="/add-item" *ngIf="isSuperAdmin"> הוסף פריט</a>
 
 
@@ -25,7 +27,8 @@
           </li>
           <li>
             <a routerLink="/cart-page">
-              הלוח שלי <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+              <img src="/assets/myBoard.png"/>
+          <span *ngIf="cartQuantity">{{cartQuantity}}</span>
             </a>
           </li>
         </ul>

@@ -8,4 +8,5 @@ export class Item {
     imageUrl!: string;
     width! : number;
     length! : number;
+    schoolCharacter? : string;
   }

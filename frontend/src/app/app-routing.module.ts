@@ -12,6 +12,7 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { MyBoardsComponent } from './components/pages/my-boards/my-boards.component';
 import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/orders-to-confirm.component';
+import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,7 +28,9 @@ const routes: Routes = [
   {path: 'payment', component: PaymentPageComponent, canActivate:[AuthGuard] },
   {path: 'track/:orderId', component: OrderTrackPageComponent, canActivate:[AuthGuard] },
   {path: 'my-boards', component: MyBoardsComponent, canActivate:[AuthGuard] },
-  {path: 'ordersToConfirm', component: OrdersToConfirmComponent, canActivate:[AuthGuard] }
+  {path: 'ordersToConfirm', component: OrdersToConfirmComponent, canActivate:[AuthGuard] },
+  {path: 'view-orders', component: ViewOrdersComponent, canActivate:[AuthGuard] }
+
 
   
 

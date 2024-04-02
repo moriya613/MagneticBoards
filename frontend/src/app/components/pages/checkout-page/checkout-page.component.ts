@@ -81,6 +81,7 @@ export class CheckoutPageComponent implements OnInit {
     this.order.name = this.fc.name.value;
     this.order.address = this.fc.address.value;
     this.order.schoolCode = this.userService.currentUser.schoolCode;
+    this.order.roleOfUser = this.userService.currentUser.role;
     this.orderService.create(this.order).subscribe({
       next:()=>{
         this.cartService.clearCart();

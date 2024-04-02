@@ -7,4 +7,5 @@ export class User{
     token!:string;
     isSuperAdmin!:boolean;
     role!:string;
+    schoolCharacter?: string;
 }

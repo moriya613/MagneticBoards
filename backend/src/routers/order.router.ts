@@ -73,6 +73,14 @@ router.post('/pay', asyncHandler( async (req:any, res) => {
     res.send(order._id);
 }))
 
+router.get('/getAllAdminsOrders', asyncHandler( async (req:any,res ) => {
+
+    console.log("inside getAllAdminsOrders" );
+    const orders= await OrderModel.find({ roleOfUser:"admin" , status: "PAYED"});
+    if(!orders) console.log("orders was not found");
+    res.send(orders);
+}))
+
 router.post('/changeStatusToApprove', asyncHandler( async (req:any, res) => {
     console.log("inside changeStatusToApprove");
     const {id} = req.body;

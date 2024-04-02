@@ -10,6 +10,7 @@ export interface Item{
     imageUrl: string;
     width : number;
     length : number;
+    schoolCharacter: string;
 }
 
 export const ItemSchema = new Schema<Item>(
@@ -21,6 +22,7 @@ export const ItemSchema = new Schema<Item>(
         imageUrl: {type: String, required: true},
         width: {type: Number, required: true},
         length: {type: Number, required: true},
+        schoolCharacter: {type:String , required: false}
 },{
     toJSON:{
         virtuals: true
