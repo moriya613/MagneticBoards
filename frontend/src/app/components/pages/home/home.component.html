@@ -2,9 +2,15 @@
 <app-tags></app-tags>
 <ul>
     <li *ngFor="let item of items">
+       <div class="cube">
         <a routerLink="/item/{{item.id}}"> 
             <img [src]="item.imageUrl" [alt]="item.name" />
+        </a>
+
             <div class="content">
+               
+                   
+        
                 <div class="name">
                     {{item.name}}
                 </div>
@@ -36,14 +42,24 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="buttons">
+                    <!-- <button (click)="addToCart(item)"   >הוסף
+                    </button> -->
+                    <button (click)="removeFromCart(item)" *ngIf="isSuperAdmin"> הסר 
+                    </button>
+                </div>
                 <div class="price">
                     <span>
                         &#8362;{{item.price }}
                     </span>
-
+                  
                 </div>
-            </div>
-        </a>
+                  
+                </div>
+               
+               
+     </div>
     </li>
 </ul>
 

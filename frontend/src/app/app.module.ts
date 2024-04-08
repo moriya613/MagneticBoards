@@ -33,6 +33,8 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
 import { MyBoardsComponent } from './components/pages/my-boards/my-boards.component';
 import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/orders-to-confirm.component';
 import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from './components/parials/confirmation-dialog/confirmation-dialog.component';
 
 
 @NgModule({
@@ -60,7 +62,8 @@ import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.
         OrderTrackPageComponent,
         MyBoardsComponent,
         OrdersToConfirmComponent,
-        ViewOrdersComponent
+        ViewOrdersComponent,
+        ConfirmationDialogComponent
 
 
     ],
@@ -76,6 +79,7 @@ import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.
         HttpClientModule,
         ReactiveFormsModule,
         FormsModule,
+        MatDialogModule,
         ToastrModule.forRoot({
             timeOut: 5000,
             positionClass: 'toast-buttom-right',

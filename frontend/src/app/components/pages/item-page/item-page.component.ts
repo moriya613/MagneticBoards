@@ -23,7 +23,7 @@ export class ItemPageComponent {
 
    addToCart(){
     this.cartService.addToCart(this.item);
-    this.router.navigateByUrl('/cart-page');
+    this.router.navigateByUrl('/');
    }
 
 }

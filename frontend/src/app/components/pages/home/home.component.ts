@@ -3,6 +3,12 @@ import { ItemsService } from '../../../services/items.service';
 import { Item } from '../../../shared/models/Item';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { CartService } from '../../../services/cart.service';
+import { UserService } from '../../../services/user.service';
+import { User } from '../../../shared/models/User';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from '../../parials/confirmation-dialog/confirmation-dialog.component';
+
 
 
 @Component({
@@ -13,8 +19,14 @@ import { Observable } from 'rxjs';
 export class HomeComponent implements OnInit {
 
   public items:Item[] = [];
+  user!:User;
 
-  constructor(private itemService:ItemsService, activatedRoute:ActivatedRoute) {
+  constructor(private itemService:ItemsService, activatedRoute:ActivatedRoute,
+     private cartService:CartService, private userService:UserService, private dialog: MatDialog) {
+
+      userService.userObservable.subscribe((newUser) => {
+        this.user = newUser;
+      })
 
     let itemsObservable: Observable<Item[]>;
 
@@ -34,6 +46,26 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  addToCart(item:Item){
+    this.cartService.addToCart(item);
+   }
+
+   removeFromCart(item:Item){
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.cartService.removefromCart(item.id);
+
+      }
+    });
+
+  }
+
+  get isSuperAdmin(){
+    return this.user.isSuperAdmin;
   }
 
 }

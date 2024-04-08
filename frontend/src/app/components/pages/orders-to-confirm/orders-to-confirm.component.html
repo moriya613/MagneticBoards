@@ -30,7 +30,7 @@
 
     <div class="buttons-container">
 
-    <button (click)="addToSelectedItems()">אישור הזמנה</button>
+    <button (click)="addToSelectedItems()" *[ngIf]="orders">אישור הזמנה</button>
 
     </div>
 

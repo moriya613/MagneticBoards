@@ -6,9 +6,17 @@ ul{
     list-style-type: none;
     padding: 0;
   }
-  
+
+ 
+  .cube {
+    border-color: #e72929;
+    background-color: rgb(247, 241, 241);
+    opacity: 95%;
+    border-radius: 3rem;
+  }
+
   li a{
-    height: 22.5rem;
+    height: 14.5rem;
     width: 20rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
@@ -33,7 +41,7 @@ ul{
     margin-top: 0.3rem;
     padding: 0.5rem 1rem;
     position: relative;
-    height: 7rem;
+    height: 9rem;
   }
   
   .name{
@@ -97,13 +105,41 @@ ul{
     color: #414141;
   }
   
-  .price{
+  /* .price{
     position: absolute;
     bottom: 0;
     left: 0.9rem;
-    background: white;
+    background-color:white;
     padding: 0.3rem 100% 0 0;
     color: #414141;
-    margin-top: 0.7rem;
+    margin-top: 0.4rem;
     font-size: 1.1rem;
+    border-radius: 1rem;
+  } */
+
+  .buttons {
+    margin-top: 0.5rem;
+    display: flex;
+  justify-content: right; /* Horizontally center */
+  align-items: right; /* Vertically center */
   }
+  button {
+    color: #e72929;
+    background-color: white ;
+    width: 40px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 1rem;
+    border-color: lightgray;
+    display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  
+  }
+
+  button:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  

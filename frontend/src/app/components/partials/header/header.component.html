@@ -12,7 +12,7 @@
           <li  *ngIf="isAuth" class = "menu-container">
             <a routerLink="/dascoard"  >{{user.name}} </a>
             <div class="menu">
-              <a routerLink="/profile" >פרופיל</a>
+              <!-- <a routerLink="/profile" >פרופיל</a> -->
               <a routerLink="/my-boards"  > ההזמנות שלי</a>
               <a routerLink="/ordersToConfirm" *ngIf="isAdmin">הזמנות לאישור</a>
               <a routerLink="/view-users" *ngIf="isSuperAdmin">הצג משתמשים</a>
