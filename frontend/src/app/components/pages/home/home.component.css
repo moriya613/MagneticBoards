@@ -9,6 +9,7 @@ ul{
 
  
   .cube {
+    margin-left: 1rem;
     border-color: #e72929;
     background-color: rgb(247, 241, 241);
     opacity: 95%;
@@ -33,7 +34,7 @@ ul{
   }
   
   li a img{
-    object-fit: fill;
+    object-fit: contain;
     height: 14.5rem;
   }
   
