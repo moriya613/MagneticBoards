@@ -19,8 +19,8 @@
             <ul>
                 <li *ngFor="let cartItem of cart.items" >
                     <div class="image-container"
-                    [style.height.cm]="cartItem.item.length"
-                    [style.width.cm]="cartItem.item.width">
+                    [style.height.cm]="cartItem.item.length/10"
+                    [style.width.cm]="cartItem.item.width/10">
                         <img class="scaled-image"
                         [src]="cartItem.item.imageUrl"
                         cdkDrag [cdkDragFreeDragPosition]="cartItem.position"
