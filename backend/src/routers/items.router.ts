@@ -33,6 +33,23 @@ router.get("/search/:searchTerm", asyncHandler(async (req,res) => {
     res.send(items);
 }) )
 
+router.post("/school-character", asyncHandler(async (req,res) => {
+    const {schoolCharacter} = req.body; 
+    console.log("inside school character");
+    const query = {
+        $or: [
+          { schoolCharacter: '' }, // Checks if the field is empty
+          { schoolCharacter: schoolCharacter } // Checks if the field equals the parameter
+        ]
+      };
+
+    const items = await ItemModel.find(query);
+    if(items) 
+        console.log("founded some items with school character " + schoolCharacter)
+    else console.log("didnt found some items with school character " + schoolCharacter)
+    res.send(items);
+}) )
+
 router.get("/tags", asyncHandler(
     async (req,res) => {
     const tags = await ItemModel.aggregate([

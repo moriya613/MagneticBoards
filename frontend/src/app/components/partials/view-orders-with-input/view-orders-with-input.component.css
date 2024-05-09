@@ -110,33 +110,7 @@ button{
 } */
 
 
-  .widthSelect{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
-
-}
-
-.lengthSelect{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 3rem;
-  margin-left: 3rem;
-
-}
-
-select{
-    width: 5rem;
-    height: 1.5rem;
-    
-    outline: 1.8px solid rgb(228, 182, 182);
-    border-radius: 0.5rem;
-    border: none;
-    border-bottom: 1px solid rgb(228, 182, 182);
-    font-size: 1.1rem;
-    font-weight: 100;
-  }
+  
 
   label {
     font-size: 1rem;
@@ -148,5 +122,8 @@ select{
 
 
   .border-style {
-    border: 3px solid black;
+
+    margin-bottom: 5rem;
+    margin-top: 0rem;
+    border: 1px solid lightgray;
   }

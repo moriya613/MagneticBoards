@@ -34,7 +34,9 @@ export class HomeComponent implements OnInit {
       if(params.searchTerm)
         itemsObservable = this.itemService.getAllItemsBySearchTerm(params.searchTerm);
       else if(params.tag)
-      itemsObservable = this.itemService.getAllItemsByTag(params.tag);
+        itemsObservable = this.itemService.getAllItemsByTag(params.tag);
+      else if(userService.currentUser.schoolCharacter)
+        itemsObservable = itemService.getItemsByScoolCharacter(userService.getIUserRegisterOfCurrentUser());
       else itemsObservable = itemService.getAll();
 
       itemsObservable.subscribe((serverItems) => {

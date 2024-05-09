@@ -8,5 +8,5 @@ export interface IUserRegister{
     schoolCode:string;
     role: string;
     grade: string;
-    character: string;
+    schoolCharacter: string;
 }

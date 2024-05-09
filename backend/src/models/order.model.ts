@@ -1,6 +1,8 @@
 import {model, Schema, Types} from 'mongoose';
 import { Item, ItemSchema } from './item.model';
 import { OrderStatus } from '../constants/order_status';
+import { Point } from "@angular/cdk/drag-drop";
+
 
 export interface LatLng{
     lat:string;
@@ -18,13 +20,16 @@ export const LatLngSchema = new Schema<LatLng>(
         item:Item;
         price:number;
         quantity:number;
+        position:string;
      }
 
      export const OrderItemSchema = new Schema<OrderItem>(
         {
             item:{type: ItemSchema, required: true},
             price: { type: Number, required: true},
-            quantity: {type: Number, required:true}
+            quantity: {type: Number, required:true},
+            position: {type: String, required:true},
+
         }
      );
 

@@ -65,7 +65,7 @@ router.post("/login", asyncHandler(
       console.log("inside register");
      
 
-        const {name, email, password, address, schoolName, schoolCode, grade , charactter, role} = req.body;
+        const {name, email, password, address, schoolName, schoolCode, grade , schoolCharacter, role} = req.body;
         const user = await UserModel.findOne({email});
 
         if(user){
@@ -96,11 +96,11 @@ router.post("/login", asyncHandler(
             schoolCode:schoolCode,
             schoolName:schoolName,
             grade:grade,
-            charactter:charactter,
+            schoolCharacter:schoolCharacter,
             isSuperAdmin:false
         }
 
-        console.log("creating a user")
+        console.log("creating a user  schoolCharacter " + schoolCharacter)
         const dbUser = await UserModel.create(newUser);
         res.send(generateTokenResponse(dbUser));
     }
@@ -121,7 +121,7 @@ router.post("/login", asyncHandler(
         schoolName: user.schoolName,
         schoolCode: user.schoolCode,
         grade: user.grade,
-        character: user.charactter,
+        schoolCharacter: user.schoolCharacter,
         role: user.role,
         isSuperAdmin: user.isSuperAdmin,
         token: token

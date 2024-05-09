@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { User } from '../../../shared/models/User';
 import { UserService } from '../../../services/user.service';
 import { Observable } from 'rxjs';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-view-users',
@@ -28,7 +30,7 @@ export class ViewUsersComponent {
   removeUser(user:User){
     this.userSerivce.removeUser({email:user.email, password: "xxx"})
     .subscribe({
-      next: (v) =>  console.log("next"),
+      next: (v) =>  window.location.reload(),
       error: (e) => console.log("error"),
   });
   }

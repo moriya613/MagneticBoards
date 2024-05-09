@@ -8,6 +8,7 @@ import { CartService } from '../../../services/cart.service';
 import { Item } from '../../../shared/models/Item';
 import { ItemsService } from '../../../services/items.service';
 import { CartItem } from '../../../shared/models/CartItem';
+import { Point } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-orders-to-confirm',
@@ -16,6 +17,8 @@ import { CartItem } from '../../../shared/models/CartItem';
 })
 export class OrdersToConfirmComponent {
   orders!:Order[];
+
+
   constructor(private router:Router, private orderService:OrderService, userService:UserService,
     private cartService:CartService, private itemService:ItemsService){
    
@@ -29,7 +32,7 @@ export class OrdersToConfirmComponent {
                                         schoolName: user.schoolCode,
                                         role: user.role,
                                         grade: "xxx",
-                                        character: "xxx"};
+                                        schoolCharacter: "xxx"};
                                         
     orderService.getNewOrdersForCurrentSchoolCode(userRegister).subscribe(
       orders => {
@@ -39,16 +42,36 @@ export class OrdersToConfirmComponent {
   }
 
 
-  selectedItems: Item[] = [];
+  selectedItems: CartItem[] = [];
   selectedOrders:Order[] = [];
+
+  getPosition(stringPoint:string):Point {
+
+    return this.parsePoint(stringPoint);
+  }
+
+  private parsePoint(str: string): { x: number; y: number } {
+    // Regular expression to find x and y values
+    const xMatch = str.match(/x:(-?\d+)/);
+    const yMatch = str.match(/y:(-?\d+)/);
+
+    // Parsing the matches into numbers and constructing the object
+    const result = {
+      x: xMatch ? Number(xMatch[1]) : 0, // Default to 0 if not found
+      y: yMatch ? Number(yMatch[1]) : 0  // Default to 0 if not found
+    };
+
+    return result;
+  }
+
 
   selectItem(order: Order, event: any) {
     
     if (event.target.checked) {
       this.selectedOrders.push(order);
-      order.items.forEach( (cartItem: CartItem) => 
-          this.itemService.getItemById(cartItem.item.id).subscribe(serverItem => {
-            this.selectedItems.push(serverItem)}))
+      // order.items.forEach( (cartItem: CartItem) => 
+      //     this.itemService.getItemById(cartItem.item.id).subscribe(serverItem => {
+      //       this.selectedItems.push(serverItem)}))
 
     } else {
 
@@ -57,26 +80,40 @@ export class OrdersToConfirmComponent {
           this.selectedOrders.splice(index, 1);
         }
 
-      order.items.forEach( (cartItem:CartItem) => {
-        const index = this.selectedItems.findIndex(selectedItem => selectedItem === cartItem.item);
-        if (index !== -1) {
-          this.selectedItems.splice(index, 1);
-        }
-      })     
+      // order.items.forEach( (cartItem:CartItem) => {
+      //   const index = this.selectedItems.findIndex(selectedItem => selectedItem === cartItem);
+      //   if (index !== -1) {
+      //     this.selectedItems.splice(index, 1);
+      //   }
+      // })     
     }
   }
 
   addToSelectedItems() {
-    this.cartService.clearCart();
+    // this.cartService.clearCart();
    
-    this.selectedItems.forEach( item => 
+    // this.selectedItems.forEach( item => 
       
-            this.cartService.addToCart(item));
+    //         this.cartService.addToCart(item.item));
+
+
+    this.selectedOrders.forEach(order =>  this.orderService.changeStatusToApproved(order).subscribe({
+      next:()=>{
+
+        console.log("V")
+        
+      },
+      error: (errorResponse) => {
+        console.log("X")
+
+      }
+    }))
+
 
     const selectedOrdersJson = JSON.stringify(this.selectedOrders);
     localStorage.setItem('selectedOrders', selectedOrdersJson);
 
-       this.router.navigateByUrl('/checkout');
+       this.router.navigateByUrl('/');
 
    
 

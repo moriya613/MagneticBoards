@@ -1,7 +1,7 @@
 import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
 import { Cart } from '../../../shared/models/Cart';
-import { CdkDragEnd } from '@angular/cdk/drag-drop';
+import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -37,11 +37,31 @@ export class BoardComponent {
 
   public onDragEnded(event: CdkDragEnd, imageUrl:string): void {
    
-    this.cartService.changePosition(imageUrl,event.source.getFreeDragPosition());
-    
-
+    this.cartService.changePosition(imageUrl,event.source.getFreeDragPosition());    
   }
 
+
+  getPosition(stringPoint:string):Point {
+
+    return this.parsePoint(stringPoint);
+  }
+
+  private parsePoint(str: string): { x: number; y: number } {
+    // Regular expression to find x and y values
+    const xMatch = str.match(/x:(-?\d+)/);
+    const yMatch = str.match(/y:(-?\d+)/);
+
+    // Parsing the matches into numbers and constructing the object
+    const result = {
+      x: xMatch ? Number(xMatch[1]) : 0, // Default to 0 if not found
+      y: yMatch ? Number(yMatch[1]) : 0  // Default to 0 if not found
+    };
+
+    return result;
+  }
+
+
+  
   public onSelectChange(event: any): void {
     this.widthOfBoard = this.widthSelect.nativeElement.value ;
     this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);

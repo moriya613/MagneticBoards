@@ -1,27 +1,15 @@
-<div class="container" dir="rtl" >
-    <div class="content" *ngFor="let order of orders" >
+<div class="container" dir="rtl">
+    <div class="custom-select">
 
-        <h2> הזמנה מספר: {{order.id}}</h2>
-
-
-        <div class="details">
-            <div>
-                <strong> תאריך</strong>   {{order.createdAt  | date:'medium'}}
-            </div>
-
-            <div>
-                <strong> שם</strong>   {{order.name}}
-            </div>
-
-            <div>
-                <strong> כתובת</strong>   {{order.address}}
-            </div>
-
-            <div>
-                <strong> סטטוס</strong>   {{order.status}}
-            </div>
-        </div>
-
-        <order-items-list [order]="order"></order-items-list>
+        <label class="schoolLabel" > 
+            בחר בית ספר</label>
+  
+        <select #schoolSelect id="schoolSelect"  (change)="onSelectChange($event)">
+            <option *ngFor="let option of schollNames" [value]="option" >{{ option }}</option>
+        </select>
+       
+        
     </div>
 </div>
+
+<app-view-orders-with-input [orders]="orders"></app-view-orders-with-input>

@@ -649,48 +649,20 @@ export const sample_items: Item[] = [
 
 
   export const sample_users: any[] = [
+
     {
-      name: "Amnon Bariach",
-      email: "Amnon@gmail.com",
-      password: "613613",
-      address: "Ashdod",
+   
+      name:"אמנון בריח",
+      email:"Amnon@gmail.com",
+      address:"השרביטן אשדוד",
+      role:"admin",
+      password:"613613",
       isSuperAdmin: true,
-      role: "admin",
-      schoolCode: 7777
-    },
-    {
-      name: "Jane Doe",
-      email: "Jane@gmail.com",
-      password: "123123",
-      address: "Shanghai",
-      isSuperAdmin: false,
-      role: "admin",
-      schoolCode: 1111
-
-
-    },
-    {
-      name: "יהונתן מנהל",
-      email: "JoA@gmail.com",
-      password: "123123",
-      address: "Shanghai",
-      isSuperAdmin: false,
-      role: "admin",
-      schoolCode: 2222
-
-
-    },
-    {
-      name: "יהונתן מורה",
-      email: "JoT@gmail.com",
-      password: "123123",
-      address: "Shanghai",
-      isSuperAdmin: false,
-      role: "teacher",
-      schoolCode: 2222
-
-
-    },
+      schoolName:"נעם",
+      schoolCode:  "613125",
+      grade:"א",
+      schoolCharacter: "חרדי"
+    }
   ];
 
   

@@ -44,7 +44,7 @@ export class CartService {
     let cartItem = this.cart.items.find(x=> x.item.imageUrl == imageUrl);
     if(!cartItem)
       return;
-    cartItem.position = position;
+    cartItem.position = '{x:' +position.x+ ', y:' + position.y+ '}';
     this.setCartToLocalStorage();
   }
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Order } from '../shared/models/Order';
 import { HttpClient } from '@angular/common/http';
-import { ORDER_ADMINS_ORDERS_URL, ORDER_CHANGE_STATUS_TO_APPROVE, ORDER_CREATE_URL, ORDER_FOR_CURRENT_USER_URL, ORDER_NEW_FOR_CURRENT_SCHOOL_CODE, ORDER_NEW_FOR_CURRENT_USER_URL, ORDER_PAY_URL, ORDER_TRACK_URL } from '../shared/constants/urls';
+import { ORDER_ADMINS_ORDERS_URL, ORDER_ALL_ORDERS_URL, ORDER_BY_SCHOOL_CODE, ORDER_CHANGE_STATUS_TO_APPROVE, ORDER_CHANGE_STATUS_TO_PAYED, ORDER_CREATE_URL, ORDER_FOR_CURRENT_USER_URL, ORDER_NEW_FOR_CURRENT_SCHOOL_CODE, ORDER_NEW_FOR_CURRENT_USER_URL, ORDER_PAY_URL, ORDER_TRACK_URL } from '../shared/constants/urls';
 import { Observable } from 'rxjs';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
@@ -19,7 +19,14 @@ export class OrderService {
   }
 
   changeStatusToApproved(order:Order):Observable<Order> {
+    console.log(order.items[0].position);
     return this.http.post<Order>(ORDER_CHANGE_STATUS_TO_APPROVE,order);
+
+  }
+
+  changeStatusToPayed(order:Order):Observable<Order> {
+    console.log(order.items[0].position);
+    return this.http.post<Order>(ORDER_CHANGE_STATUS_TO_PAYED,order);
 
   }
 
@@ -35,8 +42,16 @@ export class OrderService {
     return this.http.get<Order[]>(ORDER_ADMINS_ORDERS_URL);
   }
 
+  getAllOrders():Observable<Order[]>{ // for super admin only
+    return this.http.get<Order[]>(ORDER_ALL_ORDERS_URL);
+  }
+
   getNewOrdersForCurrentSchoolCode(userRegister:IUserRegister):Observable<Order[]>{ // get board that need approval
     return this.http.post<Order[]>(ORDER_NEW_FOR_CURRENT_SCHOOL_CODE , userRegister);
+  }
+
+  getAllOrdersBySchoolCode(userRegister:IUserRegister):Observable<Order[]>{ // get board that need approval
+    return this.http.post<Order[]>(ORDER_BY_SCHOOL_CODE , userRegister);
   }
 
   pay(order:Order):Observable<string>{

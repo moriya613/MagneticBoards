@@ -1,5 +1,8 @@
 <app-title title="הלוח שלי" margine="1.5rem 0 0 2.5rem"></app-title>
 
+
+<app-board></app-board>
+
 <div class="container">
     <ul>
         <li *ngFor="let cartItem of cart.items">
@@ -26,9 +29,9 @@
                  </select>
             </div>
 
-            <div>
+            <!-- <div>
                 &#8362;{{cartItem.price}}
-            </div>
+            </div> -->
 
             <div>
                 <button class="remove-button" (click)="removeFromCart(cartItem)">
@@ -41,12 +44,10 @@
     <div class="checkout">
         <div>
             <div class="total-count">{{cart.totalCount}}</div>
-            <div class="total-price">  &#8362; {{cart.totalPrice}}</div>
+            <!-- <div class="total-price">  &#8362; {{cart.totalPrice}}</div> -->
         </div>
         
         <a routerLink="/checkout">סיים לוח</a>
 
     </div>
 </div>
-
-<app-board></app-board>

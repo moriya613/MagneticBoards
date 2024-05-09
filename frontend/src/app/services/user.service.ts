@@ -26,6 +26,10 @@ export class UserService
     return this.http.get<User[]>(USERS_URL);
   }
 
+  getAllUserRegistered():Observable<IUserRegister[]>{
+    return this.http.get<IUserRegister[]>(USERS_URL);
+  }
+
   removeUser(userLogin:IUserLogin):Observable<User>{
     return this.http.post<User>(USER_REMOVE_URL, userLogin)
      .pipe(
@@ -102,6 +106,23 @@ export class UserService
       `Welcome to Magnetic board !`,
       'Login Successful'
     )
+  }
+
+    getIUserRegisterOfCurrentUser():IUserRegister {
+
+    const userRegister:IUserRegister = {
+      name: this.currentUser.name,
+      email: this.currentUser.email,
+      password: "xxx",
+      confirmPassword: "xxx",
+      address: this.currentUser.address,
+      schoolCode: this.currentUser.schoolCode,
+      schoolName: this.currentUser.schoolCode,
+      role: this.currentUser.role,
+      grade: "xxx",
+      schoolCharacter: this.currentUser.schoolCharacter ? this.currentUser.schoolCharacter : ''};
+
+      return userRegister;
   }
 
   private setUserToLocalStorage(user:User){

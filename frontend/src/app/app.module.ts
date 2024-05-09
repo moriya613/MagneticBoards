@@ -35,7 +35,7 @@ import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/o
 import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from './components/parials/confirmation-dialog/confirmation-dialog.component';
-
+import { ViewOrdersWithInputComponent } from './components/partials/view-orders-with-input/view-orders-with-input.component';
 
 @NgModule({
     declarations: [
@@ -63,7 +63,8 @@ import { ConfirmationDialogComponent } from './components/parials/confirmation-d
         MyBoardsComponent,
         OrdersToConfirmComponent,
         ViewOrdersComponent,
-        ConfirmationDialogComponent
+        ConfirmationDialogComponent,
+        ViewOrdersWithInputComponent
 
 
     ],

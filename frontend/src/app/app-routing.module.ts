@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'search/:searchTerm', component: HomeComponent},
   {path: 'tag/:tag', component: HomeComponent},
+  {path: 'school-character/:character', component: HomeComponent},
 
   {path: 'item/:id', component: ItemPageComponent},
   {path: 'cart-page', component: CartPageComponent},

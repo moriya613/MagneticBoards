@@ -56,6 +56,16 @@ router.post('/newOrdersForCurrentSchoolCode', asyncHandler( async (req:any,res )
     res.send(orders);
 }))
 
+router.post('/getAllOrdersBySchoolCode', asyncHandler( async (req:any,res ) => {
+    const {schoolCode} = req.body;
+    console.log("orders for school code :" + schoolCode);
+    const orders= await OrderModel.find({ schoolCode:schoolCode});
+    if(!orders) console.log("orders for school code :" + req.schoolCode + "was not found");
+    res.send(orders);
+}))
+
+
+
 
 router.post('/pay', asyncHandler( async (req:any, res) => {
     console.log("inside pay");
@@ -81,6 +91,14 @@ router.get('/getAllAdminsOrders', asyncHandler( async (req:any,res ) => {
     res.send(orders);
 }))
 
+router.get('/getAllOrders', asyncHandler( async (req:any,res ) => {
+
+    console.log("inside getAllOrders" );
+    const orders= await OrderModel.find();
+    if(!orders) console.log("orders was not found");
+    res.send(orders);
+}))
+
 router.post('/changeStatusToApprove', asyncHandler( async (req:any, res) => {
     console.log("inside changeStatusToApprove");
     const {id} = req.body;
@@ -95,6 +113,26 @@ router.post('/changeStatusToApprove', asyncHandler( async (req:any, res) => {
     }
 
     order.status = OrderStatus.APPROVED;
+    await order.save();
+
+    res.send(order._id);
+}))
+
+
+router.post('/changeStatusToPayed', asyncHandler( async (req:any, res) => {
+    console.log("inside changeStatusToPayed");
+    const {id} = req.body;
+    console.log("inside changeStatusToPayed" +id);
+
+    const order = await OrderModel.findOne({ _id: id});
+    if(!order){
+        console.log("not found order with id " + id);
+
+        res.status(HTTP_BAD_REQUEST).send('Order Not Found!');
+        return;
+    }
+
+    order.status = OrderStatus.PAYED;
     await order.save();
 
     res.send(order._id);

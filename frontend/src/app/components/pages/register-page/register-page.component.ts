@@ -64,7 +64,7 @@ export class RegisterPageComponent implements OnInit {
       schoolName: fv.schoolName,
       role: fv.role,
       grade: fv.grade,
-      character: fv.chracter
+      schoolCharacter: fv.character
     };
 
     this.userService.register(user) .subscribe({

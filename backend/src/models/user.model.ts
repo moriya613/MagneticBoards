@@ -9,7 +9,7 @@ export interface User{
     schoolName:string;
     schoolCode:string;
     grade:string;
-    charactter:string;
+    schoolCharacter:string;
     role:string;
     isSuperAdmin:boolean;
 }
@@ -25,7 +25,7 @@ export const UserSchema = new Schema<User>({
     schoolName:{type: String, required: false},
     schoolCode:{type: String, required: true},
     grade:{type: String, required: false},
-    charactter:{type: String, required: false},
+    schoolCharacter:{type: String, required: false},
 }, {
     timestamps: true,
     toJSON:{

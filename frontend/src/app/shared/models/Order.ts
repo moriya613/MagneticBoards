@@ -9,7 +9,7 @@ export class Order {
     schoolCode!:string;
     paymentId!:string;
     createdAt!:string;
-    roleOfUser!:string;
+    roleOfUser!:string; 
     status!:string;
     widthOfBoard!:number;
     heightOfBoard!:number;;

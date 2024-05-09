@@ -1,8 +1,12 @@
 <div class="container" dir="rtl" >
     <div class="content" *ngFor="let order of orders" >
 
-        <div dir="rtl">
-        <h2> הזמנה מספר: {{order.id}}</h2>
+        <div class="checkBoxAndTitle">
+            <input type="checkbox" name="cb" [value]="order" (change)="selectItem(order, $event)">
+            <h2> הזמנה מספר: {{order.id}}</h2>
+        </div>
+
+
         <div class="details">
             <div>
                 <strong> תאריך</strong>   {{order.createdAt  | date:'medium'}}
@@ -23,8 +27,7 @@
 
         <order-items-list [order]="order"></order-items-list>
 
-    </div>
-        <div class="board-container" >
+        <div class="board-container">
 
             <div class="center-content"
                 [style.height.cm]="12"
@@ -45,7 +48,20 @@
              </div>
         </div>
 
+        <div class="border-style">
+          </div>
+          
+
     </div>
 
     
+    <div class="buttons-container">
+
+        <button (click)="changeStatusToPay()" *ngIf="orders"> שנה סטטוס לשולם</button>
+        <strong  *ngIf="!orders"> אין הזמנות לאישור</strong>
+
+        </div> 
+
 </div>
+
+

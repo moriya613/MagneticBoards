@@ -6,6 +6,7 @@ export class User{
     schoolCode!:string;
     token!:string;
     isSuperAdmin!:boolean;
-    role!:string;
     schoolCharacter?: string;
+
+    role!:string;
 }
