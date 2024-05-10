@@ -14,6 +14,8 @@ export const ITEMS_BY_TAG_URL = ITEMS_URL + '/tag/';
 export const ITEMS_BY_ID_URL = ITEMS_URL + '/';
 
 export const USERS_URL = BASE_URL + '/api/users';
+export const USERS_ADMINS_URL = BASE_URL + '/api/users/getAdmins';
+
 
 export const USER_LOGIN_URL = BASE_URL  + '/api/users/login';
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { HttpClient } from '@angular/common/http';
-import { USERS_URL, USER_LOGIN_URL, USER_REGISTER_URL, USER_REMOVE_URL } from '../shared/constants/urls';
+import { USERS_ADMINS_URL, USERS_URL, USER_LOGIN_URL, USER_REGISTER_URL, USER_REMOVE_URL } from '../shared/constants/urls';
 import { User } from '../shared/models/User';
 import { ToastrService } from 'ngx-toastr';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
@@ -26,8 +26,8 @@ export class UserService
     return this.http.get<User[]>(USERS_URL);
   }
 
-  getAllUserRegistered():Observable<IUserRegister[]>{
-    return this.http.get<IUserRegister[]>(USERS_URL);
+  getAllAdmins():Observable<IUserRegister[]>{
+    return this.http.get<IUserRegister[]>(USERS_ADMINS_URL);
   }
 
   removeUser(userLogin:IUserLogin):Observable<User>{

@@ -28,7 +28,7 @@ export class ViewOrdersComponent implements OnInit  {
   }
 
   ngOnInit(): void {
-    this.userService.getAllUserRegistered().subscribe(
+    this.userService.getAllAdmins().subscribe(
       users => {
           this.users = users;
           this.schollNames = this.users.map(user => `${user.schoolCode}, ${user.schoolName}, ${user.address}`);

@@ -26,6 +26,12 @@ router.get("/",asyncHandler(async (req,res) => {
   res.send(users);
 }))
 
+router.get("/getAdmins",asyncHandler(async (req,res) => {
+  console.log("inside get all users")
+  const users = await UserModel.find({role:"admin"});
+  res.send(users);
+}))
+
 router.post("/login", asyncHandler(
     async (req, res) => {
       console.log("inside login");

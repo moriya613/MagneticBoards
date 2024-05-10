@@ -1,10 +1,12 @@
-<div class="container" dir="ltr">
+<div class="container" dir="rtl">
+
         <div class="custom-select">
+            <label class="niceSelect" > 
+                בחר רוחב לוח (מטרים)</label>
             <select #widthSelect id="widthSelect" [(ngModel)]="widthOfBoard" (change)="onSelectChange($event)">
                 <option *ngFor="let option of widthOptions" [value]="option *10" >{{ option }}</option>
             </select>
-            <label class="niceSelect" > 
-              בחר רוחב לוח (מטרים)</label>
+           
 
             
         </div>
