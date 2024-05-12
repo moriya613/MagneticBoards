@@ -28,6 +28,10 @@ export const ORDERS_URL = BASE_URL + '/api/orders';
 export const ORDER_CREATE_URL = ORDERS_URL + '/create';
 export const ORDER_CHANGE_STATUS_TO_APPROVE = ORDERS_URL + '/changeStatusToApprove'
 export const ORDER_CHANGE_STATUS_TO_PAYED = ORDERS_URL + '/changeStatusToPayed'
+export const ORDER_CHANGE_STATUS_TO_REJECT = ORDERS_URL + '/changeStatusToReject'
+
+export const ORDER_CHANGE_STATUS_TO_NEW = ORDERS_URL + '/changeStatusToNew'
+
 
 export const ORDER_NEW_FOR_CURRENT_SCHOOL_CODE = ORDERS_URL + '/newOrdersForCurrentSchoolCode';
 export const ORDER_BY_SCHOOL_CODE = ORDERS_URL + '/getAllOrdersBySchoolCode';

@@ -4,7 +4,7 @@ import { sample_items, sample_tags } from '../../data';
 import { Tag } from '../shared/models/Tag';
 import { HttpClient } from '@angular/common/http';
 import { ITEMS_BY_ID_URL, ITEMS_BY_SCHOOL_CHARACTER_URL, ITEMS_BY_SEARCH_URL, ITEMS_BY_TAG_URL, ITEMS_TAGS_URL, ITEMS_URL } from '../shared/constants/urls';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
 
 @Injectable({
@@ -12,10 +12,17 @@ import { IUserRegister } from '../shared/interfaces/IUserRegister';
 })
 export class ItemsService {
 
-  constructor(private http:HttpClient) { }
+  allItems!:Observable<Item[]>;
+  allTags!:Observable<Tag[]>;
+  constructor(private http:HttpClient) { 
+  }
 
   getAll():Observable<Item[]>{
-    return this.http.get<Item[]>(ITEMS_URL);
+    if(this.allItems)
+      return this.allItems;
+
+    this.allItems = this.http.get<Item[]>(ITEMS_URL);
+    return this.allItems;
   }
 
   getItemsByScoolCharacter(userRegister:IUserRegister):Observable<Item[]> {
@@ -33,7 +40,10 @@ export class ItemsService {
   }
 
   getAllTags():Observable<Tag[]>{
-    return this.http.get<Tag[]>(ITEMS_TAGS_URL);
+    if(this.allTags)
+      return this.allTags;
+    this.allTags = this.http.get<Tag[]>(ITEMS_TAGS_URL);
+    return this.allTags;
   }
 
   getAllItemsByTag(tag:string) : Observable<Item[]>{

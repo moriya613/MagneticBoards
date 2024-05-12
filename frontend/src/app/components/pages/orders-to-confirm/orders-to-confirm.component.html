@@ -21,8 +21,16 @@
             </div> -->
 
             <div>
-                <strong> סטטוס</strong>   {{order.status}}
+                <strong> סטטוס</strong>   {{getStatus(order)}}
             </div>
+
+            <div class="adminNotes">
+                <strong> הערות מנהל</strong> 
+                <div  contenteditable="true" class="editable-input" (input)="onInput($event, order)">
+                    {{ order.adminNotes }}
+                  </div>
+                    <button class="sendNotes" (click)="sendNotes(order)"> שלח</button>
+                 </div>
         </div>
 
         <order-items-list [order]="order"></order-items-list>
@@ -41,11 +49,22 @@
                                 [src]="cartItem.item.imageUrl"
                                 cdkDrag [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
                                 cdkDrag cdkDragBoundary=".center-content" 
-                                > 
+                                (cdkDragEnded)="onDragEnded($event, cartItem.item.imageUrl, order)">
+
+                                
                             </div>
                         </li>
                     </ul>
              </div>
+
+             
+        </div>
+
+        <div >
+            <button  class="saveAfterEdit" (click)="saveAfterEdit(order)" >
+              שמירה לאחר עריכה
+            </button>
+
         </div>
 
         <div class="border-style">
@@ -57,8 +76,8 @@
     
     <div class="buttons-container">
 
-        <button (click)="addToSelectedItems()" *ngIf="orders.length > 0">אישור הזמנה</button>
-        <strong  *ngIf="orders.length == 0"> אין הזמנות לאישור</strong>
+        <button (click)="addToSelectedItems()" *ngIf="orders.length > 0">אישור לוחות</button>
+        <strong  *ngIf="orders.length == 0"> אין לוחות לאישור</strong>
 
         </div> 
 

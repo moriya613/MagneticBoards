@@ -8,7 +8,7 @@ import { CartService } from '../../../services/cart.service';
 import { Item } from '../../../shared/models/Item';
 import { ItemsService } from '../../../services/items.service';
 import { CartItem } from '../../../shared/models/CartItem';
-import { Point } from '@angular/cdk/drag-drop';
+import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-orders-to-confirm',
@@ -34,7 +34,7 @@ export class OrdersToConfirmComponent {
                                         grade: "xxx",
                                         schoolCharacter: "xxx"};
                                         
-    orderService.getNewOrdersForCurrentSchoolCode(userRegister).subscribe(
+    orderService.getAllOrdersBySchoolCode(userRegister).subscribe(
       orders => {
         this.orders = orders;
       }
@@ -44,6 +44,10 @@ export class OrdersToConfirmComponent {
 
   selectedItems: CartItem[] = [];
   selectedOrders:Order[] = [];
+
+  getStatus(order:Order):string{
+    return this.orderService.getHebrewStatus(order);
+  }
 
   getPosition(stringPoint:string):Point {
 
@@ -118,6 +122,30 @@ export class OrdersToConfirmComponent {
    
 
     // Logic to handle addition to selectedItems if needed
+  }
+  onInput(event: any, order:Order) {
+    order.adminNotes = event.target.innerText ;
+  }
+
+  sendNotes(order:Order){
+    this.orderService.changeStatusToReject(order).subscribe();
+    
+  }
+
+  public onDragEnded(event: CdkDragEnd, imageUrl:string, order:Order): void {
+   
+    let cartItem = order.items.find(x=> x.item.imageUrl == imageUrl);
+    if(!cartItem)
+      return;
+    cartItem.position = '{x:' +event.source.getFreeDragPosition().x+ ', y:' + event.source.getFreeDragPosition().y+ '}';
+    
+  
+    //this.orderService.changePosition(imageUrl,event.source.getFreeDragPosition());    
+  }
+  
+  saveAfterEdit(order:Order){
+    this.orderService.changeStatusToNew(order).subscribe();
+  
   }
 
 

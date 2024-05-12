@@ -118,6 +118,48 @@ router.post('/changeStatusToApprove', asyncHandler( async (req:any, res) => {
     res.send(order._id);
 }))
 
+router.post('/changeStatusToNew', asyncHandler( async (req:any, res) => {
+    console.log("inside changeStatusToNew");
+    const {id,items, adminNotes} = req.body;
+    console.log("inside changeStatusToNew" +id);
+
+    const order = await OrderModel.findOne({ _id: id});
+    if(!order){
+        console.log("not found order with id " + id);
+
+        res.status(HTTP_BAD_REQUEST).send('Order Not Found!');
+        return;
+    }
+
+    order.status = OrderStatus.NEW;
+    order.items = items;
+    order.adminNotes = adminNotes;
+    await order.save();
+
+    res.send(order._id);
+}))
+
+router.post('/changeStatusToReject', asyncHandler( async (req:any, res) => {
+    console.log("inside changeStatusToReject");
+    const {id,items, adminNotes} = req.body;
+    console.log("inside changeStatusToReject" +id);
+
+    const order = await OrderModel.findOne({ _id: id});
+    if(!order){
+        console.log("not found order with id " + id);
+
+        res.status(HTTP_BAD_REQUEST).send('Order Not Found!');
+        return;
+    }
+
+    order.status = OrderStatus.REJECT;
+    order.adminNotes = adminNotes;
+    await order.save();
+
+    res.send(order._id);
+}))
+
+
 
 router.post('/changeStatusToPayed', asyncHandler( async (req:any, res) => {
     console.log("inside changeStatusToPayed");

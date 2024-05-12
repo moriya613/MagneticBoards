@@ -2,7 +2,7 @@
     <div class="content" *ngFor="let order of orders" >
 
         <div dir="rtl">
-        <h2> הזמנה מספר: {{order.id}}</h2>
+        <h2> לוח מספר: {{order.id}}</h2>
         <div class="details">
             <div>
                 <strong> תאריך</strong>   {{order.createdAt  | date:'medium'}}
@@ -17,13 +17,21 @@
             </div> -->
 
             <div>
-                <strong> סטטוס</strong>   {{order.status}}
+                <strong> סטטוס</strong>   {{getStatus(order)}}
+            </div>
+
+            <div class="adminNotes">
+                <strong> הערות מנהל</strong>   {{order.adminNotes}}
             </div>
         </div>
 
         <order-items-list [order]="order"></order-items-list>
 
     </div>
+    
+ 
+
+
         <div class="board-container" >
 
             <div class="center-content"
@@ -34,16 +42,20 @@
                             <div class="image-container"
                             [style.height.cm]="cartItem.item.length/10"
                             [style.width.cm]="cartItem.item.width/10">
-                                <img class="scaled-image"
-                                [src]="cartItem.item.imageUrl"
-                                cdkDrag [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
-                                cdkDrag cdkDragBoundary=".center-content" 
-                                > 
+                            <img class="scaled-image"
+                            [src]="cartItem.item.imageUrl"
+                            cdkDrag [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
+                            cdkDrag cdkDragBoundary=".center-content" 
+                            (cdkDragEnded)="onDragEnded($event, cartItem.item.imageUrl, order)">
                             </div>
                         </li>
                     </ul>
              </div>
         </div>
+        <div class="buttons">
+            <button (click)="saveAfterEdit(order)" >
+              שמירה לאחר עריכה
+            </button>
 
     </div>
 

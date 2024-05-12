@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 
@@ -7,7 +7,10 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
   templateUrl: './confirmation-dialog.component.html',
   styleUrl: './confirmation-dialog.component.css'
 })
+
+
 export class ConfirmationDialogComponent {
+  
     constructor(public dialogRef: MatDialogRef<ConfirmationDialogComponent>) {}
   }
 

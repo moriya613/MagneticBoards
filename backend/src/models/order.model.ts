@@ -48,6 +48,7 @@ export const LatLngSchema = new Schema<LatLng>(
         schoolCode: string;
         createdAt:Date;
         updatedAt:Date;
+        adminNotes:string;
     
     }
 
@@ -63,7 +64,8 @@ export const LatLngSchema = new Schema<LatLng>(
             schoolCode: {type:String},
             roleOfUser: {type:String},
             widthOfBoard: {type:Number, required:false},
-            heightOfBoard: {type:Number, required:false}
+            heightOfBoard: {type:Number, required:false},
+            adminNotes:{type:String}
         }, {
             timestamps:true,
             toJSON: {

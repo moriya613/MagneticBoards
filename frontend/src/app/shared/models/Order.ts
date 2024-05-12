@@ -12,6 +12,7 @@ export class Order {
     roleOfUser!:string; 
     status!:string;
     widthOfBoard!:number;
-    heightOfBoard!:number;;
+    heightOfBoard!:number;
+    adminNotes!:string;
 
 }

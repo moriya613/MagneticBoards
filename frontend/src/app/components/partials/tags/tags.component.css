@@ -5,11 +5,12 @@ div{
   }
   
   div a{
-    padding: 0.3rem 1rem;
-    margin: 0.2rem 0.15rem;
+    padding: 0.3rem 0.5rem;
+    /* margin: 0.2rem 0.15rem; */
     border-radius: 10rem;
     font-weight: 600;
     color: brown;
+   
   }
 
   img {

@@ -34,7 +34,7 @@ import { MyBoardsComponent } from './components/pages/my-boards/my-boards.compon
 import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/orders-to-confirm.component';
 import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ConfirmationDialogComponent } from './components/parials/confirmation-dialog/confirmation-dialog.component';
+import { ConfirmationDialogComponent } from './components/partials/confirmation-dialog/confirmation-dialog.component';
 import { ViewOrdersWithInputComponent } from './components/partials/view-orders-with-input/view-orders-with-input.component';
 
 @NgModule({

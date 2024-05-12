@@ -35,6 +35,25 @@ checkBoxAndTitle {
     justify-content: center;
   }
 
+  .sendNotes {
+    margin-right: 0.5rem;
+    
+    width: 5rem;
+    color: white;
+    background-color: #e72929;
+    height: 1.8rem;
+    opacity: 0.8;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 2px grey;
+  }
+
+
+ 
+ 
+
+
 button{
     margin-top: 60rem;
     margin-bottom: 60rem;
@@ -56,13 +75,18 @@ button{
     cursor: pointer;
   }
 
+  button:active {
+    background-color: gray;
+  }
+
 
   .board-container {
 
-    margin: 1.5rem;
+    margin: 0rem;
+    margin-bottom: 0rem;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* 100% of the viewport height */
+    height: 87vh; /* 100% of the viewport height */
 }  
 
 .center-content {
@@ -148,5 +172,39 @@ select{
 
 
   .border-style {
-    border: 3px solid black;
+    border: 1px solid lightgray;
   }
+
+  .adminNotes {
+    display: inline-flex;
+
+
+  }
+
+  .editable-input {
+    margin-right: 10rem;
+
+    border: 1px solid #ccc;
+border-radius: 0.5rem;
+    min-width: 15rem; /* Minimum width of the input */
+    max-width: 50%; /* Maximum width of the input */
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: inline-block; /* Allows the div to grow with content */
+    white-space: wrap; /* Prevents wrapping text to a new line */
+    overflow: hidden; /* Keeps the content from overflowing */
+  }
+
+  .saveAfterEdit{
+    color: white;
+    background-color: #e72929;
+    width: 15rem;
+    height: 2rem;
+    opacity: 0.8;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 2px grey;
+    margin-bottom: 5rem;
+  }
+  
