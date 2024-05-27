@@ -1,7 +1,7 @@
 import { environment } from "../../../environments/environment.prod";
 
-//const BASE_URL =  environment.production? '' : 'http://localhost:5000';
-const BASE_URL =  'http://localhost:5000';
+const BASE_URL =  environment.production? '' : 'http://localhost:5000';
+//const BASE_URL =  'http://localhost:5000';
 
 
 
@@ -44,3 +44,4 @@ export const ORDER_NEW_FOR_CURRENT_USER_URL = ORDERS_URL + '/newOrderForCurrentU
 
 export const ORDER_PAY_URL = ORDERS_URL + '/pay';
 export const ORDER_TRACK_URL = ORDERS_URL + '/track/';
+export const ORDER_SEND_MAIL_URL = ORDERS_URL + '/send-email';
