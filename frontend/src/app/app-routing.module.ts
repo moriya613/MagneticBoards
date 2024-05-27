@@ -13,6 +13,7 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
 import { MyBoardsComponent } from './components/pages/my-boards/my-boards.component';
 import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/orders-to-confirm.component';
 import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.component';
+import { EmailFormComponent } from './components/pages/email-form/email-form.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -24,6 +25,8 @@ const routes: Routes = [
   {path: 'cart-page', component: CartPageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
+  {path: 'send-email', component: EmailFormComponent},
+
   {path: 'view-users', component: ViewUsersComponent},
   {path: 'checkout', component: CheckoutPageComponent, canActivate:[AuthGuard]},
   {path: 'payment', component: PaymentPageComponent, canActivate:[AuthGuard] },

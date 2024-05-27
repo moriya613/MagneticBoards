@@ -11,7 +11,9 @@ import { Point } from '@angular/cdk/drag-drop';
 export class CartService {
 
   private cart:Cart = this.getCartFromLocalStorage();
+  private checkoutCart!:Cart;
   private cartSubject:BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
+  
 
   addToCart(item:Item): void{
     let cartItem = this.cart.items.find(x => x.item.id == item.id);
@@ -24,6 +26,25 @@ export class CartService {
     }
     this.cart.items.push(new CartItem(item));
     this.setCartToLocalStorage();
+  }
+
+  addToCheckoutCart(cartItem:CartItem){
+    if(!this.checkoutCart) {
+      this.checkoutCart = new Cart();
+    }
+
+    let cItem = this.checkoutCart.items.find(x => x.item.id == cartItem.item.id);
+    if(cItem) {
+      let index = this.checkoutCart.items.indexOf(cItem);
+      this.checkoutCart.items[index].quantity= this.checkoutCart.items[index].quantity+1;
+
+      return;
+    }
+    this.checkoutCart .items.push(cartItem);
+  }
+
+  clearCheckoutCart(){
+    this.checkoutCart = new Cart();
   }
 
   removefromCart(id:string):void{
@@ -67,6 +88,11 @@ export class CartService {
     return this.cartSubject.value;
   }
 
+  getCheckoutCart():Cart {
+    return this.checkoutCart;
+  }
+
+
   private setCartToLocalStorage(): void {
     this.cart.totalPrice = this.cart.items
       .reduce((prevSum, currentItem) => prevSum + currentItem.price * currentItem.quantity, 0);
@@ -87,6 +113,8 @@ export class CartService {
       return new Cart();
    }
   }
+
+  
 
   constructor() { }
 }

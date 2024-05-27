@@ -3,6 +3,8 @@ import { Order } from '../../../shared/models/Order';
 import { OrderService } from '../../../services/order.service';
 import { Router } from '@angular/router';
 import { Point } from '@angular/cdk/drag-drop';
+import { CartItem } from '../../../shared/models/CartItem';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-view-orders-with-input',
@@ -15,7 +17,10 @@ export class ViewOrdersWithInputComponent {
   @Input()
   orders!:Order[];
 
-  constructor(private router:Router, private orderService:OrderService){
+  @Input()
+  schoolName!:string;
+
+  constructor(private router:Router, private orderService:OrderService, private cartService:CartService){
    
                                            
   }
@@ -59,10 +64,14 @@ export class ViewOrdersWithInputComponent {
     }
   }
 
+  selectedItems: CartItem[] = [];
+
   changeStatusToPay() {
    
 
-    this.selectedOrders.forEach(order =>  this.orderService.changeStatusToPayed(order).subscribe({
+    this.selectedOrders.forEach(order =>  {
+      order.items.forEach(item => this.cartService.addToCheckoutCart(item));
+      this.orderService.changeStatusToPayed(order).subscribe({
       next:()=>{
 
         console.log("V")
@@ -72,10 +81,11 @@ export class ViewOrdersWithInputComponent {
         console.log("X")
 
       }
-    }))
+    })})
 
 
-       this.router.navigateByUrl('/');
+    this.orderService.setOrderNameToLocalStorage(this.schoolName);
+       this.router.navigateByUrl('/checkout');
   }
 
 

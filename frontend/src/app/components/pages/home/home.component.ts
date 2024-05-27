@@ -8,6 +8,7 @@ import { UserService } from '../../../services/user.service';
 import { User } from '../../../shared/models/User';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../../partials/confirmation-dialog/confirmation-dialog.component';
+import { CdkDragEnd, CdkDragStart, Point } from '@angular/cdk/drag-drop';
 
 
 
@@ -48,6 +49,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+  originalPlace!:Point;
+
+  onDragEnded(event:CdkDragEnd,item:Item){
+    this.cartService.addToCart(item);
+    event.source.setFreeDragPosition(this.originalPlace);
+
+  }
+
+  onDragStart(event:CdkDragStart,item:Item){
+    this.originalPlace = event.source.getFreeDragPosition();
   }
 
   addToCart(item:Item){

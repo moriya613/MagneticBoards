@@ -1,0 +1,60 @@
+
+
+<div class="container" dir="rtl">
+
+  <div>
+
+    <app-title dir="rtl" title="שליחת הזמנה במייל"></app-title>
+  
+  </div>
+
+  
+
+  <form (ngSubmit)="sendEmail()">
+
+      <div>
+        <text-input
+        [control]="fc.name"
+        [showErrorsWhen]="isSubmitted"
+        type="text"
+        label="שם המזמין">
+         </text-input>
+
+        <!-- <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required> -->
+      </div>
+
+      <div>
+        <text-input dir="ltr"
+        [control]="fc.email"
+        [showErrorsWhen]="isSubmitted"
+        type="email"
+        label="דואר אלקטרוני">
+         </text-input>
+
+        <!-- <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required> -->
+      </div>
+      <div>
+        <text-input
+        [control]="fc.subject"
+        [showErrorsWhen]="isSubmitted"
+        type="text"
+        label="נושא">
+         </text-input>
+
+        <!-- <label for="subject">Subject:</label>
+        <input type="text" id="subject" [(ngModel)]="subject" name="subject" required> -->
+      </div>
+      <div class="message">
+        <textarea class="auto-resize-textarea" 
+        [textContent]="message"
+        (input)="autoResize($event)" 
+        placeholder="הודעה"></textarea>
+
+        <!-- <label for="message">Message:</label>
+        <textarea id="message" [(ngModel)]="message" name="message" required></textarea> -->
+      </div>
+      <button type="submit">שלח מייל עם פרטי הזמנה</button>
+    </form>
+  </div>

@@ -4,9 +4,12 @@
 <app-board></app-board>
 <ul>
     <li *ngFor="let item of items">
-       <div class="cube">
+       <div class="cube" >
         <a routerLink="/item/{{item.id}}"> 
-            <img [src]="item.imageUrl" [alt]="item.name" />
+            <img [src]="item.imageUrl" [alt]="item.name" 
+            cdkDrag (cdkDragEnded)="onDragEnded($event,item)" (cdkDragStarted)="onDragStart($event,item)"/>
+
+           
         </a>
 
             <div class="content">

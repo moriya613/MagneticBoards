@@ -2,7 +2,7 @@
     <div class="content">
       <app-title title="פרטי הזמנה" fontSize="1.6rem"></app-title>
       <form [formGroup]="checkoutForm">
-        <text-input [control]="fc.name" label="שם"></text-input>
+        <text-input dir="rtl" [control]="fc.name" label="שם"></text-input>
         <!-- <text-input [control]="fc.address" label="כתובת"></text-input> -->
       </form>
       <order-items-list [order]="order"></order-items-list>
@@ -14,10 +14,11 @@
         fontSize="1.6rem"></app-title>
       </div>
 
+
       <div class="buttons-container">
         <div class="buttons">
           <button (click)="createOrder()" >
-            אישור
+            שלח הזמנה להדפסה
           </button>
         </div>
       </div>

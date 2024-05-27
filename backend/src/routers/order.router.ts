@@ -4,6 +4,8 @@ import { HTTP_BAD_REQUEST } from '../constants/http_status';
 import auth from '../middlewares/auth.mid'
 import { OrderStatus } from '../constants/order_status';
 import { OrderModel } from '../models/order.model';
+const nodemailer = require('nodemailer');
+
 
 const router = Router();
 router.use(auth)
@@ -58,8 +60,9 @@ router.post('/newOrdersForCurrentSchoolCode', asyncHandler( async (req:any,res )
 
 router.post('/getAllOrdersBySchoolCode', asyncHandler( async (req:any,res ) => {
     const {schoolCode} = req.body;
-    console.log("orders for school code :" + schoolCode);
     const orders= await OrderModel.find({ schoolCode:schoolCode});
+    console.log("orders for school code :" + schoolCode + orders);
+
     if(!orders) console.log("orders for school code :" + req.schoolCode + "was not found");
     res.send(orders);
 }))
@@ -193,3 +196,44 @@ async function getNewOrderForCurrentUser(req: any) {
     console.log(req.user.id);
     return await OrderModel.findOne({ user: req.user.id, status: OrderStatus.NEW });
 }
+
+
+router.post('/send-email', (req, res) => {
+    console.log("inside send-email");
+
+    const { email, subject, message } = req.body;
+    console.log(email + subject);
+
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        secure: false,
+        host: "smtp.gmail.com",
+        port: 587,
+        auth: {
+            user: 'moriya.raz@gmail.com',  // replace with your email
+            pass: 'fgzz feja sgqt dxln',  // replace with your email password
+        },
+    });
+
+    const mailOptions = {
+        from: 'moriya.raz@gmail.com',  // replace with your email
+        to: email,
+        subject: subject,
+        text: message,
+    //     html: `<div dir="rtl">
+    //   ${message}
+    // </div>`
+    };
+
+    transporter.sendMail(mailOptions, (error:any, info:any) => {
+        if (error) {
+            console.log("Email NOT sent: " + error);
+
+            return res.status(500).send(error.toString());
+        }
+        res.send('Email sent: ' + info.response);
+        console.log("Email sent");
+
+    });
+});

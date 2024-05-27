@@ -36,6 +36,9 @@ import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from './components/partials/confirmation-dialog/confirmation-dialog.component';
 import { ViewOrdersWithInputComponent } from './components/partials/view-orders-with-input/view-orders-with-input.component';
+import { WarningDialogComponent } from './components/partials/warning-dialog/warning-dialog.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { EmailFormComponent } from './components/pages/email-form/email-form.component';
 
 @NgModule({
     declarations: [
@@ -64,12 +67,15 @@ import { ViewOrdersWithInputComponent } from './components/partials/view-orders-
         OrdersToConfirmComponent,
         ViewOrdersComponent,
         ConfirmationDialogComponent,
-        ViewOrdersWithInputComponent
+        ViewOrdersWithInputComponent,
+        WarningDialogComponent,
+        EmailFormComponent
 
 
     ],
     providers: [
-        {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true }
+        {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true },
+        provideAnimationsAsync()
     ],
     bootstrap: [AppComponent],
     imports: [

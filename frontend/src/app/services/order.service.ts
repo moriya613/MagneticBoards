@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Order } from '../shared/models/Order';
 import { HttpClient } from '@angular/common/http';
-import { ORDER_ADMINS_ORDERS_URL, ORDER_ALL_ORDERS_URL, ORDER_BY_SCHOOL_CODE, ORDER_CHANGE_STATUS_TO_APPROVE, ORDER_CHANGE_STATUS_TO_NEW, ORDER_CHANGE_STATUS_TO_PAYED, ORDER_CHANGE_STATUS_TO_REJECT, ORDER_CREATE_URL, ORDER_FOR_CURRENT_USER_URL, ORDER_NEW_FOR_CURRENT_SCHOOL_CODE, ORDER_NEW_FOR_CURRENT_USER_URL, ORDER_PAY_URL, ORDER_TRACK_URL } from '../shared/constants/urls';
+import { ORDER_ADMINS_ORDERS_URL, ORDER_ALL_ORDERS_URL, ORDER_BY_SCHOOL_CODE, ORDER_CHANGE_STATUS_TO_APPROVE, ORDER_CHANGE_STATUS_TO_NEW, ORDER_CHANGE_STATUS_TO_PAYED, ORDER_CHANGE_STATUS_TO_REJECT, ORDER_CREATE_URL, ORDER_FOR_CURRENT_USER_URL, ORDER_NEW_FOR_CURRENT_SCHOOL_CODE, ORDER_NEW_FOR_CURRENT_USER_URL, ORDER_PAY_URL, ORDER_SEND_MAIL_URL, ORDER_TRACK_URL } from '../shared/constants/urls';
 import { Observable } from 'rxjs';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { IUserRegister } from '../shared/interfaces/IUserRegister';
@@ -73,6 +73,9 @@ export class OrderService {
     return this.http.get<Order>(ORDER_TRACK_URL + id) ;
   }
 
+  sendEmail(emailData: { email: string; subject: string; message: string }): Observable<any> {
+    return this.http.post(ORDER_SEND_MAIL_URL, emailData);
+  }
 
   getHebrewStatus(order:Order):string{
     if(order.status == 'NEW')
@@ -80,12 +83,33 @@ export class OrderService {
     if(order.status == 'APPROVED')
       return 'מאושר';
     if(order.status == 'PAYED')
-      return 'הסתיים';
+      return 'שולם';
     if(order.status == 'REJECT')
       return 'ממתין לתיקון המורה';
 
     return '';
   }
+
+  setOrderNameToLocalStorage(schoolName:string): void {
+    
+    localStorage.setItem('orderName', schoolName);
+  }
+
+  getOrderNameFromLocalStorage(): string {
+   try{
+    const orderName = localStorage.getItem('orderName');
+    if(orderName)
+      return orderName;
+    return ''
+
+   } catch(exception){
+    return ''
+
+   }
+   
+
+  }
+
 
   
 }

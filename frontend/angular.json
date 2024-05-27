@@ -39,6 +39,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "../backend/built/public",
+
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -50,8 +51,9 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
-              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -118,6 +120,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []

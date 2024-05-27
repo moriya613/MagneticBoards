@@ -21,6 +21,7 @@ export class ViewOrdersComponent implements OnInit  {
   schoolCode:string = '999';
   schollNames:string []=[''];
   @ViewChild('schoolSelect') schoolSelect!: ElementRef;
+  schollFullName!:string;
 
 
   constructor( private orderService:OrderService, private userService:UserService,){                   
@@ -64,6 +65,8 @@ export class ViewOrdersComponent implements OnInit  {
           this.orders =orders;
         }
       )
+
+      this.schollFullName = this.schoolSelect.nativeElement.value;
          
       
 
