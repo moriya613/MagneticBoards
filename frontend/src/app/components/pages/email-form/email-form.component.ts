@@ -34,7 +34,7 @@ export class EmailFormComponent implements OnInit {
     this.email = '@gmail.com';
     this.subject = 'נא לשלוח את הפרטים הבאים להדפסה'
 
-    this.cartService.getCheckoutCart().items.forEach((item, index) =>  this.message += index + ') ' +'שם המוצר: ' + item.item.name + '\t ' + 'גודל המוצר: ' + item.item.width + 'X' + item.item.length + ' \t כמות: ' + item.quantity + '\n');
+    this.cartService.getCheckoutCart().items.forEach((item, index) =>  this.message += index + ') ' +'שם המוצר: ' + item.item.name + '\t ' + 'גודל המוצר: ' + item.item.width + '/' + item.item.length + ' \t כמות: ' + item.quantity + '\n');
 
 
     this.emailForm = this.formBuilder.group({

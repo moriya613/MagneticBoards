@@ -38,6 +38,7 @@ export const LatLngSchema = new Schema<LatLng>(
         items:OrderItem[];
         totalPrice:number;
         name:string;
+        boardName:string;
         address:string;
         paymentId:string;
         status:OrderStatus;
@@ -55,6 +56,8 @@ export const LatLngSchema = new Schema<LatLng>(
     const orderSchema =new Schema<Order>(
         {
             name: {type:String, required: true},
+            boardName: {type:String, required: true},
+
             address: {type:String, required: true},
             paymentId: {type:String},
             totalPrice: {type:Number, required:true},

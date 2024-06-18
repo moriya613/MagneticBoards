@@ -5,6 +5,7 @@ export class Order {
     items!:CartItem[];
     totalPrice!:number;
     name!:string;
+    boardName!:string;
     address!:string;
     schoolCode!:string;
     paymentId!:string;

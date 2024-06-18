@@ -39,6 +39,7 @@ import { ViewOrdersWithInputComponent } from './components/partials/view-orders-
 import { WarningDialogComponent } from './components/partials/warning-dialog/warning-dialog.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { EmailFormComponent } from './components/pages/email-form/email-form.component';
+import { BoardSummaryComponent } from './components/pages/board-summary/board-summary.component';
 
 @NgModule({
     declarations: [
@@ -69,7 +70,8 @@ import { EmailFormComponent } from './components/pages/email-form/email-form.com
         ConfirmationDialogComponent,
         ViewOrdersWithInputComponent,
         WarningDialogComponent,
-        EmailFormComponent
+        EmailFormComponent, 
+        BoardSummaryComponent
 
 
     ],

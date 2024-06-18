@@ -30,6 +30,8 @@
   type="password">
   `</text-input>
 
+ 
+
   <div class="selectRole" dir="rtl">
     <label for="roleSelector"> תפקיד: </label>
     <select id="role" formControlName="role">
@@ -74,10 +76,24 @@
     </select>
   </div>
 
-  <div class="selectGrade" dir="rtl"
+  <div class="selectCharacter" dir="rtl"
+  *ngIf="registerForm.get('role')?.value === 'teacher'">
+    <label for="roleSelector"> אופי בית הספר: </label>
+    <select id="role" formControlName="character">
+      <option disabled>בחר </option>
+      <option formControlName="character">ממלכתי</option>
+      <option formControlName="character">ממלכתי דתי</option>
+      <option formControlName="character"> חרדי</option>
+
+    </select>
+  </div>
+
+ 
+
+  <!-- <div class="selectGrade" dir="rtl"
   *ngIf="registerForm.get('role')?.value === 'teacher'">
     <label for="roleSelector"> כיתה: </label>
-    <select id="role" formControlName="character">
+    <select id="role" formControlName="grade">
       <option >א</option>
       <option >ב</option>
       <option >ג</option>
@@ -85,7 +101,7 @@
       <option >ה</option>
       <option >ו</option>
     </select>
-  </div>
+  </div> -->
   
   
   <default-button text="" imgSrc="/assets/register.png" imgWidth="220" bgColor="white"></default-button>

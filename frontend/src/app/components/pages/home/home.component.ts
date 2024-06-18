@@ -36,8 +36,8 @@ export class HomeComponent implements OnInit {
         itemsObservable = this.itemService.getAllItemsBySearchTerm(params.searchTerm);
       else if(params.tag)
         itemsObservable = this.itemService.getAllItemsByTag(params.tag);
-      else if(userService.currentUser.schoolCharacter)
-        itemsObservable = itemService.getItemsByScoolCharacter(userService.getIUserRegisterOfCurrentUser());
+      // else if(userService.currentUser.schoolCharacter)
+      //   itemsObservable = itemService.getItemsByScoolCharacter(userService.getIUserRegisterOfCurrentUser());
       else itemsObservable = itemService.getAll();
 
       itemsObservable.subscribe((serverItems) => {
@@ -80,6 +80,16 @@ export class HomeComponent implements OnInit {
 
   get isSuperAdmin(){
     return this.user.isSuperAdmin;
+  }
+
+  isSchoolCharMatch(item:Item): boolean{
+    if(!item.schoolCharacter)
+      return true;
+
+    if(!this.userService.currentUser.schoolCharacter)
+      return true;
+
+    return (item.schoolCharacter.includes(this.userService.currentUser.schoolCharacter));
   }
 
 }

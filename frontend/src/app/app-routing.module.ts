@@ -14,6 +14,7 @@ import { MyBoardsComponent } from './components/pages/my-boards/my-boards.compon
 import { OrdersToConfirmComponent } from './components/pages/orders-to-confirm/orders-to-confirm.component';
 import { ViewOrdersComponent } from './components/pages/view-orders/view-orders.component';
 import { EmailFormComponent } from './components/pages/email-form/email-form.component';
+import { BoardSummaryComponent } from './components/pages/board-summary/board-summary.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -29,6 +30,8 @@ const routes: Routes = [
 
   {path: 'view-users', component: ViewUsersComponent},
   {path: 'checkout', component: CheckoutPageComponent, canActivate:[AuthGuard]},
+  {path: 'summary', component: BoardSummaryComponent, canActivate:[AuthGuard]},
+
   {path: 'payment', component: PaymentPageComponent, canActivate:[AuthGuard] },
   {path: 'track/:orderId', component: OrderTrackPageComponent, canActivate:[AuthGuard] },
   {path: 'my-boards', component: MyBoardsComponent, canActivate:[AuthGuard] },
