@@ -1,7 +1,7 @@
 import { environment } from "../../../environments/environment.prod";
 
-//const BASE_URL =  environment.production? '' : 'http://localhost:5000';
-const BASE_URL =  'http://localhost:5000';
+const BASE_URL =  environment.production? '' : 'http://localhost:5000';
+//const BASE_URL =  'http://localhost:5000';
 
 export const ITEMS_URL = BASE_URL + '/api/items';
 export const ITEMS_TAGS_URL = ITEMS_URL + '/tags';
