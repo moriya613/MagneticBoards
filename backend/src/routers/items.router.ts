@@ -72,7 +72,7 @@ router.get("/tags", asyncHandler(
         }
     ]).sort({count: -1});
     const all = {
-        name: 'הכל',
+        name: 'All',
         count:await ItemModel.countDocuments()
     }
 

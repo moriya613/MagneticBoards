@@ -36,8 +36,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון כחול שמאל צר",
     "length": 117.68,
@@ -51,8 +50,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון אדום ימין צר",
     "length": 117.72,
@@ -66,8 +64,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון אדום שמאל צר",
     "length": 117.68,
@@ -81,8 +78,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון צהוב ימין צר",
     "length": 117.68,
@@ -96,8 +92,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון צהוב שמאל צר",
     "length": 117.68,
@@ -111,8 +106,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מפריד משולשים",
     "length": 7.13,
@@ -126,8 +120,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מפריד קווים",
     "length": 7.13,
@@ -141,8 +134,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מפריד אלכסונים ירוק כחול",
     "length": 7.13,
@@ -156,8 +148,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מפריד אלכסונים ורוד סגול",
     "length": 7.13,
@@ -171,8 +162,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילדה עם ספר",
     "length": 30.37,
@@ -186,8 +176,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד עם ספר",
     "length": 31.76,
@@ -201,8 +190,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בלון כתום",
     "length": 60.49,
@@ -216,8 +204,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בלוןן טורקיז",
     "length": 59.88,
@@ -231,8 +218,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בלון צהוב",
     "length": 39.01,
@@ -246,8 +232,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בלון ירוק",
     "length": 35.38,
@@ -261,8 +246,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בלון חיכן לב",
     "length": 29.81,
@@ -276,8 +260,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בלון חיכן עגול",
     "length": 29.7,
@@ -291,8 +274,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון גדול כחול רחב",
     "length": 117.08,
@@ -306,8 +288,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון גדול אדום רחב",
     "length": 117.08,
@@ -321,8 +302,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון גדול צהוב רחב",
     "length": 117.08,
@@ -336,8 +316,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון גדול כחול רחב",
     "length": 117.08,
@@ -351,8 +330,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון גדול אדום רחב",
     "length": 117.08,
@@ -366,8 +344,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון גדול צהוב רחב",
     "length": 117.08,
@@ -381,8 +358,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בראשית",
     "length": 12.0,
@@ -396,8 +372,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "נח",
     "length": 12.0,
@@ -411,8 +386,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "לך לך",
     "length": 12.0,
@@ -426,8 +400,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וירא",
     "length": 12.0,
@@ -441,8 +414,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חיי שרה",
     "length": 12.0,
@@ -456,8 +428,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תולדות",
     "length": 12.0,
@@ -471,8 +442,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ויצא",
     "length": 12.0,
@@ -486,8 +456,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וישלח",
     "length": 12.0,
@@ -501,8 +470,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וישב",
     "length": 12.0,
@@ -516,8 +484,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מקץ",
     "length": 12.0,
@@ -531,8 +498,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ויגש",
     "length": 12.0,
@@ -546,8 +512,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ויחי",
     "length": 12.0,
@@ -561,8 +526,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שמות",
     "length": 12.0,
@@ -576,8 +540,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וארה",
     "length": 12.0,
@@ -591,8 +554,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בא",
     "length": 12.0,
@@ -606,8 +568,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בשלח",
     "length": 12.0,
@@ -621,8 +582,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יתרו",
     "length": 12.0,
@@ -636,8 +596,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפטים",
     "length": 12.0,
@@ -651,8 +610,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרומה",
     "length": 12.0,
@@ -666,8 +624,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תצוה",
     "length": 12.0,
@@ -681,8 +638,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כי תשא",
     "length": 12.0,
@@ -696,8 +652,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ויקהל",
     "length": 12.0,
@@ -711,8 +666,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פקודי",
     "length": 12.0,
@@ -726,8 +680,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ויקרא",
     "length": 12.0,
@@ -741,8 +694,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "צו",
     "length": 12.0,
@@ -756,8 +708,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שמיני",
     "length": 12.0,
@@ -771,8 +722,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תזריע",
     "length": 12.0,
@@ -786,8 +736,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מצורע",
     "length": 12.0,
@@ -801,8 +750,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "אחרי מות",
     "length": 12.0,
@@ -816,8 +764,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "קדושים",
     "length": 12.0,
@@ -831,8 +778,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "אמור",
     "length": 12.0,
@@ -846,8 +792,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בהר",
     "length": 12.0,
@@ -861,8 +806,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בחוקותי ",
     "length": 12.0,
@@ -876,8 +820,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "במדבר ",
     "length": 12.0,
@@ -891,8 +834,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "נשא",
     "length": 12.0,
@@ -906,8 +848,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בהעלותך",
     "length": 12.0,
@@ -921,8 +862,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שלח לך",
     "length": 12.0,
@@ -936,8 +876,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "קרח",
     "length": 12.0,
@@ -951,8 +890,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חקת",
     "length": 12.0,
@@ -966,8 +904,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בלק",
     "length": 12.0,
@@ -981,8 +918,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינחס",
     "length": 12.0,
@@ -996,8 +932,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מטות",
     "length": 12.0,
@@ -1011,8 +946,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מסעי",
     "length": 12.0,
@@ -1026,8 +960,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דברים",
     "length": 12.0,
@@ -1041,8 +974,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ואתחנן",
     "length": 12.0,
@@ -1056,8 +988,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עקב",
     "length": 12.0,
@@ -1071,8 +1002,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ראה",
     "length": 12.0,
@@ -1086,8 +1016,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שופטים",
     "length": 12.0,
@@ -1101,8 +1030,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כי תצא",
     "length": 12.0,
@@ -1116,8 +1044,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כי תבוא",
     "length": 12.0,
@@ -1131,8 +1058,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ניצבים",
     "length": 12.0,
@@ -1146,8 +1072,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילך",
     "length": 12.0,
@@ -1161,8 +1086,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "האזינו",
     "length": 12.0,
@@ -1176,8 +1100,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וזאת הברכה",
     "length": 12.0,
@@ -1191,8 +1114,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 0 עם ידיים ורגליים",
     "length": 15.84,
@@ -1207,8 +1129,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 1 עם ידיים ורגליים",
     "length": 15.74,
@@ -1223,8 +1144,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 2 עם ידיים ורגליים",
     "length": 16.44,
@@ -1239,8 +1159,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 3 עם ידיים ורגליים",
     "length": 17.08,
@@ -1255,8 +1174,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 4 עם ידיים ורגליים",
     "length": 16.27,
@@ -1271,8 +1189,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 5 עם ידיים ורגליים",
     "length": 16.87,
@@ -1287,8 +1204,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 6 עם ידיים ורגליים",
     "length": 16.2,
@@ -1303,8 +1219,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 7 עם ידיים ורגליים",
     "length": 15.81,
@@ -1319,8 +1234,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 8 עם ידיים ורגליים",
     "length": 15.49,
@@ -1335,8 +1249,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 9 עם ידיים ורגליים",
     "length": 15.53,
@@ -1351,8 +1264,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "אנגלית LONG",
     "length": 29.75,
@@ -1366,8 +1278,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "אנגלית COLOR",
     "length": 42.06,
@@ -1381,8 +1292,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "אנגלית HOWARE YOU",
     "length": 42.03,
@@ -1396,8 +1306,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "אנגלית BODY",
     "length": 42.06,
@@ -1411,8 +1320,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר 4 ספרתי",
     "length": 21.03,
@@ -1426,8 +1334,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מכתב",
     "length": 29.75,
@@ -1441,8 +1348,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חולמים בגדול כותרת",
     "length": 15.74,
@@ -1456,8 +1362,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כוכב מלא",
     "length": 3.11,
@@ -1471,8 +1376,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כוכב חלול",
     "length": 3.07,
@@ -1486,8 +1390,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ספרים",
     "length": 16.41,
@@ -1501,8 +1404,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "סרגל אותיות",
     "length": 19.23,
@@ -1516,8 +1418,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יש לי יום הולדת",
     "length": 12.0,
@@ -1531,8 +1432,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרגיל חילוק",
     "length": 21.03,
@@ -1546,8 +1446,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד עם עיפרון",
     "length": 41.0,
@@ -1561,8 +1460,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילדה עם עיפרון",
     "length": 45.34,
@@ -1576,8 +1474,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילדה מציירת עפרון גדול",
     "length": 35.67,
@@ -1591,8 +1488,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד מצייר עפרון גדול",
     "length": 44.5,
@@ -1606,8 +1502,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שיר",
     "length": 29.75,
@@ -1621,8 +1516,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "סיפור עם",
     "length": 29.75,
@@ -1636,8 +1530,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מתכון",
     "length": 29.75,
@@ -1651,8 +1544,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר חד ספרתי",
     "length": 21.03,
@@ -1666,8 +1558,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד יושב על עיפרון",
     "length": 50.99,
@@ -1681,8 +1572,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פיצוח מילים",
     "length": 50.07,
@@ -1696,8 +1586,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מאזכרים",
     "length": 50.07,
@@ -1711,8 +1600,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בית המספרים מליון",
     "length": 35.07,
@@ -1726,8 +1614,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כוכב עם פרצוף",
     "length": 8.68,
@@ -1741,8 +1628,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שמש",
     "length": 17.36,
@@ -1756,8 +1642,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור  צהובה",
     "length": 14.61,
@@ -1771,8 +1656,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור ירוקה",
     "length": 14.82,
@@ -1786,8 +1670,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור כחולה",
     "length": 14.78,
@@ -1801,8 +1684,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור אדומה",
     "length": 13.59,
@@ -1816,8 +1698,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור סגולה",
     "length": 16.65,
@@ -1831,8 +1712,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרפר",
     "length": 16.94,
@@ -1846,8 +1726,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ענן",
     "length": 7.09,
@@ -1861,8 +1740,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חושבים ומחשבים",
     "length": 30.24,
@@ -1876,8 +1754,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "רשי",
     "length": 42.03,
@@ -1891,8 +1768,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בית המספרים -אלף",
     "length": 35.04,
@@ -1906,8 +1782,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח ורוד גבעול",
     "length": 20.08,
@@ -1921,8 +1796,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חושבים ומחשבים כותרת",
     "length": 16.23,
@@ -1936,8 +1810,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כתבה",
     "length": 29.75,
@@ -1951,8 +1824,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מאפייני המשל",
     "length": 29.75,
@@ -1966,8 +1838,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המרובעים",
     "length": 50.39,
@@ -1981,8 +1852,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח סגול",
     "length": 5.61,
@@ -1996,8 +1866,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח צהוב",
     "length": 7.2,
@@ -2011,8 +1880,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח אדום",
     "length": 6.67,
@@ -2026,8 +1894,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח אדום עם גבעול",
     "length": 20.4,
@@ -2041,8 +1908,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח כתום עם גבעול",
     "length": 19.65,
@@ -2056,8 +1922,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח צהוב",
     "length": 6.56,
@@ -2071,8 +1936,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח ורוד",
     "length": 6.77,
@@ -2086,8 +1950,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח ורוד",
     "length": 5.19,
@@ -2101,8 +1964,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרח צהוב עם גבעול",
     "length": 20.96,
@@ -2116,8 +1978,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "סרגל אותיות",
     "length": 19.23,
@@ -2131,8 +1992,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שמות שבר",
     "length": 29.75,
@@ -2146,8 +2006,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "סיפור עם",
     "length": 29.75,
@@ -2161,8 +2020,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרגיל חילוק",
     "length": 21.03,
@@ -2176,8 +2034,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר תלת ספרתי",
     "length": 21.03,
@@ -2191,8 +2048,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרגיל כפל",
     "length": 21.03,
@@ -2206,8 +2062,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת",
     "length": 52.05,
@@ -2221,8 +2076,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חלון לשפה - כותרת",
     "length": 18.67,
@@ -2236,8 +2090,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד על ספר צד שמאל",
     "length": 43.51,
@@ -2251,8 +2104,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד על ספר צד ימין",
     "length": 41.6,
@@ -2266,8 +2118,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המשולשים- שווה שוקיים",
     "length": 29.92,
@@ -2281,8 +2132,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המשולשים- שווה צלעות",
     "length": 29.92,
@@ -2296,8 +2146,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המשולשים- חד זוית",
     "length": 29.89,
@@ -2311,8 +2160,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המשולשים- קהה זוית",
     "length": 29.85,
@@ -2326,8 +2174,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המשולשים- ישר זוית",
     "length": 29.92,
@@ -2341,8 +2188,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המשולשים- שונה צלעות",
     "length": 29.92,
@@ -2356,8 +2202,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כותרת תן חיוך",
     "length": 18.74,
@@ -2371,8 +2216,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ענן",
     "length": 29.08,
@@ -2386,8 +2230,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חיוך סגול",
     "length": 5.15,
@@ -2401,8 +2244,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חייכן צהוב",
     "length": 4.52,
@@ -2416,8 +2258,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דגלים צבעוני",
     "length": 15.74,
@@ -2431,8 +2272,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דגלים כחול לבן",
     "length": 15.74,
@@ -2446,8 +2286,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דגלים ישראל",
     "length": 15.71,
@@ -2461,8 +2300,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת הלאום כותרת",
     "length": 14.18,
@@ -2476,8 +2314,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "השורש",
     "length": 29.75,
@@ -2491,8 +2328,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "הפועל",
     "length": 31.05,
@@ -2506,8 +2342,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילדה מחזיקה ספרים",
     "length": 49.26,
@@ -2521,8 +2356,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילדה על ספר",
     "length": 41.21,
@@ -2536,8 +2370,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד יושב על ספרים",
     "length": 52.33,
@@ -2551,8 +2384,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כותרת וילון אדום",
     "length": 10.69,
@@ -2566,8 +2398,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כותרת וילון תכלת",
     "length": 10.34,
@@ -2581,8 +2412,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כותרת וילון צהוב",
     "length": 10.44,
@@ -2596,8 +2426,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון רחב תכלת",
     "length": 117.08,
@@ -2611,8 +2440,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון רחב אדום",
     "length": 117.08,
@@ -2626,8 +2454,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון רחב צהוב",
     "length": 117.08,
@@ -2641,8 +2468,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון רחב תכלת",
     "length": 117.08,
@@ -2656,8 +2482,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון רחב אדום",
     "length": 117.08,
@@ -2671,8 +2496,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "וילון רחב צהוב",
     "length": 117.08,
@@ -2686,8 +2510,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - ראש ממשלה",
     "length": 20.81,
@@ -2701,8 +2524,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - הימנון",
     "length": 20.81,
@@ -2716,8 +2538,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - כותל",
     "length": 20.81,
@@ -2731,8 +2552,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - סמל המדינה",
     "length": 20.81,
@@ -2746,8 +2566,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - רב ראשי ספרדי",
     "length": 20.81,
@@ -2761,8 +2580,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - דגל",
     "length": 20.81,
@@ -2776,8 +2594,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - הרב אליהו",
     "length": 20.81,
@@ -2791,8 +2608,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - רב ראשי אשכנזי",
     "length": 20.81,
@@ -2806,8 +2622,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פינת לאום - נשיא",
     "length": 20.79,
@@ -2821,8 +2636,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 9.14,
@@ -2836,8 +2650,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 8.89,
@@ -2851,8 +2664,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 8.89,
@@ -2866,8 +2678,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 9.14,
@@ -2881,8 +2692,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 9.0,
@@ -2896,8 +2706,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 8.96,
@@ -2911,8 +2720,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 9.1,
@@ -2926,8 +2734,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 8.93,
@@ -2941,8 +2748,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 9.1,
@@ -2956,8 +2762,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים 0-9",
     "length": 9.1,
@@ -2971,8 +2776,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פרפר כחול",
     "length": 50.67,
@@ -2986,8 +2790,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בית המספרים עשרות",
     "length": 35.04,
@@ -3001,8 +2804,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בית המספרים מאות",
     "length": 35.07,
@@ -3016,8 +2818,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח כחול",
     "length": 32.2,
@@ -3031,8 +2832,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח כחול",
     "length": 32.22,
@@ -3046,8 +2846,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור ורודה",
     "length": 27.24,
@@ -3061,8 +2860,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור ירוקה",
     "length": 33.35,
@@ -3076,8 +2874,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור ירוקה",
     "length": 10.27,
@@ -3091,8 +2888,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "לוח הכפל",
     "length": 63.66,
@@ -3106,8 +2902,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "לוח המאה",
     "length": 63.62,
@@ -3121,8 +2916,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילד עם עפיפון",
     "length": 74.98,
@@ -3136,8 +2930,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המשולשים",
     "length": 50.04,
@@ -3151,8 +2944,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עיפרון ירוק עם ידיים",
     "length": 48.13,
@@ -3166,8 +2958,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עיפרון סגול עם ידיים",
     "length": 72.51,
@@ -3181,8 +2972,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עיפרון ורדו עם ידיים",
     "length": 51.59,
@@ -3196,8 +2986,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עיפרון צהוב עם ידיים",
     "length": 67.68,
@@ -3211,8 +3000,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עיפרון תכלת עם ידיים",
     "length": 72.51,
@@ -3226,8 +3014,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כתב רשי כותרת",
     "length": 12.91,
@@ -3241,8 +3028,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "שמש מחייכת",
     "length": 21.88,
@@ -3256,8 +3042,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור צבעונית",
     "length": 24.7,
@@ -3271,8 +3056,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ערמת ספרים",
     "length": 25.26,
@@ -3286,8 +3070,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור אדומה",
     "length": 19.97,
@@ -3301,8 +3084,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "סיפור",
     "length": 29.75,
@@ -3316,8 +3098,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כותרת יום הולדת",
     "length": 12.0,
@@ -3331,8 +3112,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש תשרי",
     "length": 17.04,
@@ -3346,8 +3126,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש חשון",
     "length": 17.04,
@@ -3361,8 +3140,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש כסלו",
     "length": 17.04,
@@ -3376,8 +3154,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש טבת",
     "length": 17.04,
@@ -3391,8 +3168,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש שבט",
     "length": 17.04,
@@ -3406,8 +3182,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש אדר",
     "length": 17.04,
@@ -3421,8 +3196,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש ניסן",
     "length": 17.04,
@@ -3436,8 +3210,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש אייר",
     "length": 17.01,
@@ -3451,8 +3224,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש סיון",
     "length": 17.01,
@@ -3466,8 +3238,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש תמוז",
     "length": 17.01,
@@ -3481,8 +3252,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש אב",
     "length": 17.01,
@@ -3496,8 +3266,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "יום הולדת - חודש אלול",
     "length": 17.01,
@@ -3511,8 +3280,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עלה ירוק",
     "length": 13.3,
@@ -3526,8 +3294,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עלה ירוק בהיר",
     "length": 19.37,
@@ -3541,8 +3308,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "סיום",
     "length": 21.07,
@@ -3556,8 +3322,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "עלילה",
     "length": 21.03,
@@ -3571,8 +3336,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פתיחה",
     "length": 21.07,
@@ -3586,8 +3350,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "חלון",
     "length": 90.86,
@@ -3601,8 +3364,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "התרחשות",
     "length": 10.55,
@@ -3616,8 +3378,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דמויות",
     "length": 10.52,
@@ -3631,8 +3392,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מקום",
     "length": 10.55,
@@ -3646,8 +3406,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "זמן",
     "length": 10.52,
@@ -3662,8 +3421,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מסר",
     "length": 10.55,
@@ -3677,8 +3435,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פיתרון",
     "length": 10.52,
@@ -3692,8 +3449,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מושגים בהנדסה",
     "length": 29.75,
@@ -3707,8 +3463,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מושגים בהנדסה",
     "length": 29.75,
@@ -3722,8 +3477,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר דו ספרתי",
     "length": 21.03,
@@ -3737,8 +3491,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "גדול מ..",
     "length": 21.03,
@@ -3752,8 +3505,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "משפחת המרובעים פלקט",
     "length": 50.35,
@@ -3767,8 +3519,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרגיל חיבור",
     "length": 21.07,
@@ -3782,8 +3533,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרגיל חיסור",
     "length": 21.07,
@@ -3797,8 +3547,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר עוקב",
     "length": 21.03,
@@ -3812,8 +3561,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספר קודם",
     "length": 21.03,
@@ -3827,8 +3575,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פיצוח מילים",
     "length": 50.07,
@@ -3842,8 +3589,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "רקע סיפורי",
     "length": 21.03,
@@ -3857,8 +3603,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "פתיחה",
     "length": 21.03,
@@ -3872,8 +3617,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בעיה",
     "length": 21.03,
@@ -3887,8 +3631,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דוגמא לבעיה",
     "length": 21.03,
@@ -3902,8 +3645,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מילות עזרה",
     "length": 21.03,
@@ -3917,8 +3659,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דוגמאות למקומות",
     "length": 21.03,
@@ -3932,8 +3673,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מילות עזרה לסיום",
     "length": 21.03,
@@ -3947,8 +3687,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דוגמאות לזמנים",
     "length": 21.03,
@@ -3962,8 +3701,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "דומאות לדמיות",
     "length": 21.03,
@@ -3977,8 +3715,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בית מספרים מיליון",
     "length": 35.07,
@@ -3992,8 +3729,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרגיל חיבור- השלמה לבד",
     "length": 18.28,
@@ -4007,8 +3743,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "תרגיל חיסור השלמה לבד",
     "length": 17.99,
@@ -4022,8 +3757,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "בעיה הסבר",
     "length": 10.55,
@@ -4037,8 +3771,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ילדה שמלה ורודה",
     "length": 41.48,
@@ -4052,8 +3785,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ענן קרם תכלת",
     "length": 14.36,
@@ -4067,8 +3799,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ענן קרם תכלת",
     "length": 9.52,
@@ -4082,8 +3813,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ענן קרם תכלת",
     "length": 7.87,
@@ -4097,8 +3827,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ענן קרם תכלת",
     "length": 11.32,
@@ -4112,8 +3841,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור צבעונית ירוק אדום צהוב",
     "length": 22.43,
@@ -4127,8 +3855,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור ירוקה ",
     "length": 13.72,
@@ -4142,8 +3869,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח כחול",
     "length": 32.2,
@@ -4157,8 +3883,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח כחול",
     "length": 37.57,
@@ -4172,8 +3897,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח ורוד ",
     "length": 37.67,
@@ -4187,8 +3911,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח ורוד ",
     "length": 32.2,
@@ -4202,8 +3925,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח ירוק",
     "length": 32.06,
@@ -4217,8 +3939,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "כדור פורח ירוק",
     "length": 37.57,
@@ -4232,8 +3953,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור גווני ירוק",
     "length": 32.45,
@@ -4247,8 +3967,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור צבעונית ירוק אדום צהוב ורוד",
     "length": 33.2,
@@ -4262,8 +3981,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור ורודה",
     "length": 16.65,
@@ -4277,8 +3995,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור ירוקה",
     "length": 14.82,
@@ -4292,8 +4009,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור צהובה",
     "length": 14.61,
@@ -4307,8 +4023,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור אדומה",
     "length": 19.97,
@@ -4322,8 +4037,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "ציפור כחולה",
     "length": 29.66,
@@ -4337,8 +4051,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "סרגל מספרים",
     "length": 14.4,
@@ -4352,8 +4065,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים לבית המספרים - 0",
     "length": 9.14,
@@ -4367,8 +4079,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים לבית המספרים - 1",
     "length": 8.89,
@@ -4382,8 +4093,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים לבית המספרים - 2",
     "length": 8.89,
@@ -4397,8 +4107,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים לבית המספרים - 3",
     "length": 9.14,
@@ -4412,8 +4121,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים לבית המספרים - 6",
     "length": 9.1,
@@ -4427,8 +4135,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים לבית המספרים - 7",
     "length": 8.89,
@@ -4442,8 +4149,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "מספרים לבית המספרים - 8",
     "length": 9.1,
@@ -4457,8 +4163,7 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  },
+schoolCharacter: ''  },
   {
     "name": "טעמי המקרא רכבת",
     "length": 14.36,
@@ -4473,6 +4178,5 @@ export const sample_items: Item[] = [
     "favorite": false,
     "uses": 0,
     "price": 9,
-    "schoolCharacter": " "
-  }
+schoolCharacter: ''  }
 ]
