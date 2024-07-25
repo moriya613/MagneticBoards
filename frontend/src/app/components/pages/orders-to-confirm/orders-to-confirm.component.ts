@@ -9,17 +9,22 @@ import { Item } from '../../../shared/models/Item';
 import { ItemsService } from '../../../services/items.service';
 import { CartItem } from '../../../shared/models/CartItem';
 import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
+import {  ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Renderer2 } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-orders-to-confirm',
   templateUrl: './orders-to-confirm.component.html',
   styleUrl: './orders-to-confirm.component.css'
 })
-export class OrdersToConfirmComponent {
+export class OrdersToConfirmComponent implements OnInit {
   orders!:Order[];
 
+  @ViewChild('editableDiv', { static: true }) editableDiv!: ElementRef;
+  ordersForm!: FormGroup;
 
-  constructor(private router:Router, private orderService:OrderService, userService:UserService,
+  constructor(private fb: FormBuilder, private router:Router, private orderService:OrderService, userService:UserService,
     private cartService:CartService, private itemService:ItemsService){
    
     const user = userService.currentUser;
@@ -40,6 +45,15 @@ export class OrdersToConfirmComponent {
       }
     )
   }
+
+  ngOnInit() {
+    this.ordersForm = this.fb.group({
+      orders: this.fb.array(this.orders.map(order => this.fb.group({
+        adminNotes: [order.adminNotes]
+      })))
+    });
+  }
+
 
 
   selectedItems: CartItem[] = [];
@@ -123,11 +137,21 @@ export class OrdersToConfirmComponent {
 
     // Logic to handle addition to selectedItems if needed
   }
-  onInput(event: any, order:Order) {
-    order.adminNotes = event.target.innerText ;
+
+  get ordersControls() {
+    return (this.ordersForm.get('orders') as FormArray).controls;
+  }
+
+  onInput(event: any, index: number) {
+    const value = event.target.innerText;
+    this.orders[index].adminNotes = value;
+    const control = (this.ordersForm.get('orders') as FormArray).at(index);
+  
+    control.get('adminNotes')?.setValue(value, { emitEvent: false });
   }
 
   sendNotes(order:Order){
+    order.adminNotes;
     this.orderService.changeStatusToReject(order).subscribe();
     
   }

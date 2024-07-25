@@ -1,5 +1,5 @@
 <div class="container" dir="rtl" >
-    <div class="content" *ngFor="let order of orders" >
+    <div class="content" *ngFor="let order of orders; let i = index"  >
 
         <div class="checkBoxAndTitle">
             <input type="checkbox" name="cb" [value]="order" (change)="selectItem(order, $event)">
@@ -27,7 +27,7 @@
 
             <div class="adminNotes">
                 <strong> הערות מנהל</strong> 
-                <div  contenteditable="true" class="editable-input" (input)="onInput($event, order)">
+                <div  contenteditable="true" class="editable-input"  (input)="onInput($event, i)" >
                     {{ order.adminNotes }}
                   </div>
                     <button class="sendNotes" (click)="sendNotes(order)"> שלח</button>

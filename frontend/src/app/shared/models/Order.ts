@@ -14,6 +14,6 @@ export class Order {
     status!:string;
     widthOfBoard!:number;
     heightOfBoard!:number;
-    adminNotes!:string;
+    adminNotes:string=' ';
 
 }
