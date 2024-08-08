@@ -156,9 +156,9 @@ export class OrdersToConfirmComponent implements OnInit {
     
   }
 
-  public onDragEnded(event: CdkDragEnd, imageUrl:string, order:Order): void {
+  public onDragEnded(event: CdkDragEnd, item:CartItem, order:Order): void {
    
-    let cartItem = order.items.find(x=> x.item.imageUrl == imageUrl);
+    let cartItem =item;
     if(!cartItem)
       return;
     cartItem.position = '{x:' +event.source.getFreeDragPosition().x+ ', y:' + event.source.getFreeDragPosition().y+ '}';

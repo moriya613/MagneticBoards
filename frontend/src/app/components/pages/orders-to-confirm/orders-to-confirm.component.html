@@ -4,7 +4,7 @@
         <div class="checkBoxAndTitle">
             <input type="checkbox" name="cb" [value]="order" (change)="selectItem(order, $event)">
             <h2> שם לוח: {{order.boardName}}</h2>
-            <h3> לוח מספר: {{order.id}}</h3>
+            <!-- <h3> לוח מספר: {{order.id}}</h3> -->
         </div>
 
 
@@ -50,7 +50,7 @@
                                 [src]="cartItem.item.imageUrl"
                                 cdkDrag [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
                                 cdkDrag cdkDragBoundary=".center-content" 
-                                (cdkDragEnded)="onDragEnded($event, cartItem.item.imageUrl, order)">
+                                (cdkDragEnded)="onDragEnded($event, cartItem, order)">
 
                                 
                             </div>

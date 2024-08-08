@@ -16,7 +16,7 @@ export class BoardSummaryComponent implements OnInit{
   order:Order = new Order();
   checkoutForm!: FormGroup;
   isSubmitted = false;
-  constructor(private cartService:CartService,
+  constructor(public cartService:CartService,
               private formBuilder: FormBuilder,
               private userService: UserService,
               private toastrService: ToastrService,

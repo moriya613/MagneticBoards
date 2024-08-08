@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Order } from '../../../shared/models/Order';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'order-items-list',
@@ -10,6 +11,6 @@ export class OrderItemsListComponent {
 @Input()
 order!:Order;
 
-constructor() {
+constructor(public cartService:CartService) {
 }
 }

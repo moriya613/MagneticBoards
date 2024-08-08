@@ -3,6 +3,7 @@ import { Order } from '../../../shared/models/Order';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../../../services/order.service';
 import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
+import { CartItem } from '../../../shared/models/CartItem';
 
 @Component({
   selector: 'app-my-boards',
@@ -45,9 +46,9 @@ private parsePoint(str: string): { x: number; y: number } {
   return result;
 }
 
-public onDragEnded(event: CdkDragEnd, imageUrl:string, order:Order): void {
+public onDragEnded(event: CdkDragEnd, cItem:CartItem, order:Order): void {
    
-  let cartItem = order.items.find(x=> x.item.imageUrl == imageUrl);
+  let cartItem = order.items.find(x=> x == cItem);
   if(!cartItem)
     return;
   cartItem.position = '{x:' +event.source.getFreeDragPosition().x+ ', y:' + event.source.getFreeDragPosition().y+ '}';

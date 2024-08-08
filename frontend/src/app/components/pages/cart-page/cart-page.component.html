@@ -5,7 +5,7 @@
 
 <div class="container">
     <ul>
-        <li *ngFor="let cartItem of cart.items">
+        <li *ngFor="let cartItem of cartService.mergeCartItems(mergedCart.items)">
             <div>
                 <img [src]="cartItem.item.imageUrl" [alt]="cartItem.item.name" drag>
             </div>
@@ -25,6 +25,8 @@
                     <option>3</option>
                     <option>4</option>
                     <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
 
                  </select>
             </div>
@@ -43,7 +45,7 @@
 
     <div class="checkout">
         <div>
-            <div class="total-count">{{cart.totalCount}}</div>
+            <div class="total-count">{{mergedCart.totalCount}}</div>
             <!-- <div class="total-price">  &#8362; {{cart.totalPrice}}</div> -->
         </div>
         

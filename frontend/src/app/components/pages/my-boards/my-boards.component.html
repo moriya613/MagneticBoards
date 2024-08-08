@@ -3,7 +3,7 @@
 
         <div dir="rtl">
         <h2> שם לוח: {{order.boardName}}</h2>
-        <h3> לוח מספר: {{order.id}}</h3>
+        <!-- <h3> לוח מספר: {{order.id}}</h3> -->
 
         <div class="details">
             <div>
@@ -48,7 +48,7 @@
                             [src]="cartItem.item.imageUrl"
                             cdkDrag [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
                             cdkDrag cdkDragBoundary=".center-content" 
-                            (cdkDragEnded)="onDragEnded($event, cartItem.item.imageUrl, order)">
+                            (cdkDragEnded)="onDragEnded($event, cartItem, order)">
                             </div>
                         </li>
                     </ul>

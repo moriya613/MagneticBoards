@@ -4,7 +4,7 @@
             <h3>מוצרים בהזמנה</h3>
         </td>
     </tr>
-    <tr *ngFor="let orderItem of order.items">
+    <tr *ngFor="let orderItem of cartService.mergeCartItems(order.items)">
         <td>
           <a routerLink="/items/{{orderItem.item.id}}">
             <img [src]="orderItem.item.imageUrl"/>

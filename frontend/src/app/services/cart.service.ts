@@ -19,14 +19,32 @@ export class CartService {
     let cartItem = this.cart.items.find(x => x.item.id == item.id);
     if(cartItem) {
       let index = this.cart.items.indexOf(cartItem);
-      this.cart.items[index].quantity= this.cart.items[index].quantity+1;
-      this.setCartToLocalStorage();
+      //this.cart.items[index].quantity= this.cart.items[index].quantity+1;
+     // this.setCartToLocalStorage();
 
-      return;
+     // return;
     }
     this.cart.items.push(new CartItem(item));
     this.setCartToLocalStorage();
   }
+
+  mergeCartItems = (cartItems: CartItem[]): CartItem[] => {
+    // Define the type of the map object with string keys and CartItem values
+    const itemMap: { [key: string]: CartItem } = cartItems.reduce((acc, cartItem) => {
+      if (acc[cartItem.item.id]) {
+        // If item with the same id exists, add to its quantity
+        acc[cartItem.item.id].quantity += cartItem.quantity;
+      } else {
+        // If item with the same id does not exist, add it
+        acc[cartItem.item.id] = { ...cartItem };
+      }
+      return acc;
+    }, {} as { [key: string]: CartItem });
+  
+    // Convert the map back to an array
+    return Object.values(itemMap);
+  }
+
 
   addToCheckoutCart(cartItem:CartItem){
     if(!this.checkoutCart) {
@@ -61,8 +79,8 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
-  changePosition(imageUrl:string, position:Point){
-    let cartItem = this.cart.items.find(x=> x.item.imageUrl == imageUrl);
+  changePosition(item:CartItem, position:Point){
+    let cartItem = item;
     if(!cartItem)
       return;
     cartItem.position = '{x:' +position.x+ ', y:' + position.y+ '}';

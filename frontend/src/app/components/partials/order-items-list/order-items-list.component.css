@@ -17,12 +17,14 @@ table{
   }
   
   td{
+    width: 10rem;
     height: 3rem;
   }
   
   td img{
+    
     width: 3rem;
     height: 3rem;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 100rem;
   }

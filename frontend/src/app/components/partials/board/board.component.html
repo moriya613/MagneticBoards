@@ -27,7 +27,7 @@
                         [src]="cartItem.item.imageUrl"
                         cdkDrag [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
                         cdkDrag cdkDragBoundary=".center-content" 
-                        (cdkDragEnded)="onDragEnded($event, cartItem.item.imageUrl)"> 
+                        (cdkDragEnded)="onDragEnded($event, cartItem)"> 
                     </div>
                 </li>
             </ul>

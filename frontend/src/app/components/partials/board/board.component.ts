@@ -3,6 +3,7 @@ import { CartService } from '../../../services/cart.service';
 import { Cart } from '../../../shared/models/Cart';
 import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CartItem } from '../../../shared/models/CartItem';
 
 
 
@@ -35,9 +36,9 @@ export class BoardComponent {
     if (this.cart.width)    this.widthOfBoard = this.cart.width;
   }
 
-  public onDragEnded(event: CdkDragEnd, imageUrl:string): void {
+  public onDragEnded(event: CdkDragEnd, item:CartItem): void {
    
-    this.cartService.changePosition(imageUrl,event.source.getFreeDragPosition());    
+    this.cartService.changePosition(item,event.source.getFreeDragPosition());    
   }
 
 
