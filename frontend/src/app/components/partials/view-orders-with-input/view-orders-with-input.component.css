@@ -80,11 +80,10 @@ button{
   }
   
   .center-content li {
-    margin-right: 10px; /* Adjust margin as needed for spacing between items */
   }
 
 .image-container {
-    position: relative;
+    position: absolute;
    
    }
 

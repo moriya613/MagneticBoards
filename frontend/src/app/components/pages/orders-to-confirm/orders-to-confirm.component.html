@@ -30,7 +30,7 @@
                 <div  contenteditable="true" class="editable-input"  (input)="onInput($event, i)" >
                     {{ order.adminNotes }}
                   </div>
-                    <button class="sendNotes" (click)="sendNotes(order)"> שלח</button>
+                    <button class="sendNotes" (click)="sendNotes($event, order)"> שלח</button>
                  </div>
         </div>
 

@@ -12,6 +12,8 @@ import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
 import {  ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-orders-to-confirm',
@@ -21,8 +23,10 @@ import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 export class OrdersToConfirmComponent implements OnInit {
   orders!:Order[];
 
-  @ViewChild('editableDiv', { static: true }) editableDiv!: ElementRef;
+  @ViewChild('editable-input', { static: true }) editableDiv!: ElementRef;
   ordersForm!: FormGroup;
+
+  private inputSubject = new Subject<{ event: any, index: number }>();
 
   constructor(private fb: FormBuilder, private router:Router, private orderService:OrderService, userService:UserService,
     private cartService:CartService, private itemService:ItemsService){
@@ -47,11 +51,15 @@ export class OrdersToConfirmComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.ordersForm = this.fb.group({
-      orders: this.fb.array(this.orders.map(order => this.fb.group({
-        adminNotes: [order.adminNotes]
-      })))
-    });
+    // this.ordersForm = this.fb.group({
+    //   orders: this.fb.array(this.orders.map(order => this.fb.group({
+    //     adminNotes: [order.adminNotes]
+    //   })))
+    // });
+
+    this.inputSubject.pipe(
+      debounceTime(300)
+    ).subscribe(({ event, index }) => this.handleInput(event, index));
   }
 
 
@@ -143,15 +151,22 @@ export class OrdersToConfirmComponent implements OnInit {
   }
 
   onInput(event: any, index: number) {
+    this.inputSubject.next({ event, index });
+  }
+  
+  handleInput(event: any, index: number) {
     const value = event.target.innerText;
     this.orders[index].adminNotes = value;
     const control = (this.ordersForm.get('orders') as FormArray).at(index);
-  
     control.get('adminNotes')?.setValue(value, { emitEvent: false });
   }
 
-  sendNotes(order:Order){
-    order.adminNotes;
+  sendNotes(event: any, order:Order){
+    
+    const adminNotes = event.target.previousElementSibling.textContent;
+
+      order.adminNotes = adminNotes;
+    
     this.orderService.changeStatusToReject(order).subscribe();
     
   }
