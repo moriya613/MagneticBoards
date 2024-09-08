@@ -6,4 +6,5 @@ export class  CartItem {
     quantity: number = 1;
     price: number = this.item.price;
     position:string ='{x:0, y:0}';
+    rotation: number =0; 
 }

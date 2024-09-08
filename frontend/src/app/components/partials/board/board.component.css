@@ -54,9 +54,32 @@ display: flex;
   .container{
     display: flex;
     margin-top: 3rem;
-
+    align-items: center;
+    justify-content: center;
     
 
+}
+.trash-area {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  background-color: #f8d7da;
+  border: 2px dashed #dc3545;
+  color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-radius: 10px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.trash-area:hover {
+  background-color: #f5c6cb;
 }
 
 
@@ -77,7 +100,7 @@ display: flex;
 }
 
 select{
-    width: 5rem;
+    width: 3rem;
     height: 1.5rem;
     
     outline: 1.8px solid rgb(228, 182, 182);
@@ -95,3 +118,48 @@ select{
 
 
   }
+
+  .emptyBoard {
+    width: 5rem;
+    height: 1.5rem;
+    margin-right: 2rem;
+    outline: 1.8px solid rgb(228, 182, 182);
+    border-radius: 0.5rem;
+    border: none;
+
+    background-color: white;
+    border-bottom: 1px solid rgb(228, 182, 182);
+  }
+
+  .emptyBoard:hover {
+    opacity: 0.5;
+  }
+
+
+  .removeItem {
+  
+    margin-top: 2rem;
+    outline: 1.8px solid rgb(228, 182, 182);
+    border: none;
+    background-color: rgb(237, 215, 215);
+    border-bottom: 1px solid rgb(228, 182, 182);
+    z-index: 1000; /* High value to bring the button to the front */
+
+  }
+
+  .removeItem:hover {
+    opacity: 0.5;
+  }
+
+  .board-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .center-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+ 

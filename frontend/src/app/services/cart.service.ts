@@ -65,8 +65,13 @@ export class CartService {
     this.checkoutCart = new Cart();
   }
 
-  removefromCart(id:string):void{
+  removefromCart(id:string):void{ // remove all instances of this item
     this.cart.items = this.cart.items.filter(x => x.item.id != id);
+    this.setCartToLocalStorage();
+  }
+
+  removeOneItemfromCart(item:CartItem):void{ // remove one item
+    this.cart.items = this.cart.items.filter(x => x != item);
     this.setCartToLocalStorage();
   }
 
@@ -84,6 +89,11 @@ export class CartService {
     if(!cartItem)
       return;
     cartItem.position = '{x:' +position.x+ ', y:' + position.y+ '}';
+    this.setCartToLocalStorage();
+  }
+
+  updateRotation(item:CartItem, rotation:number){
+    item.rotation = rotation
     this.setCartToLocalStorage();
   }
 

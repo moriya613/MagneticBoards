@@ -21,6 +21,7 @@ export const LatLngSchema = new Schema<LatLng>(
         price:number;
         quantity:number;
         position:string;
+        rotation: number;
      }
 
      export const OrderItemSchema = new Schema<OrderItem>(
@@ -29,6 +30,7 @@ export const LatLngSchema = new Schema<LatLng>(
             price: { type: Number, required: true},
             quantity: {type: Number, required:true},
             position: {type: String, required:true},
+            rotation: {type: Number, required: true}
 
         }
      );

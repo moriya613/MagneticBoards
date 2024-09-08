@@ -1,9 +1,10 @@
-import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, NgModule, OnInit, ViewChild } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
 import { Cart } from '../../../shared/models/Cart';
-import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, CdkDragEnd, CdkDragStart, Point } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartItem } from '../../../shared/models/CartItem';
+import { NgZone } from '@angular/core';
 
 
 
@@ -12,13 +13,15 @@ import { CartItem } from '../../../shared/models/CartItem';
   templateUrl: './board.component.html',
   styleUrl: './board.component.css'
 })
-export class BoardComponent {
+export class BoardComponent implements OnInit{
+
 
   @ViewChild('widthSelect') widthSelect!: ElementRef;
   @ViewChild('lengthSelect') lengthSelect!: ElementRef;
 
 
   cart!:Cart;
+  selectedItem: CartItem | null = null;
   heightOfBoard:number = 12; 
   widthOfBoard:number = 10; // Variable to store user input as a number
 
@@ -27,7 +30,7 @@ export class BoardComponent {
 
 
 
-  constructor(private cartService:CartService){
+  constructor(private cartService:CartService, private cdr: ChangeDetectorRef, private ngZone: NgZone){
 
     //this.cartService.changeBoardLength(this.widthOfBoard, this.heightOfBoard);
 
@@ -36,16 +39,55 @@ export class BoardComponent {
     if (this.cart.width)    this.widthOfBoard = this.cart.width;
   }
 
-  public onDragEnded(event: CdkDragEnd, item:CartItem): void {
-   
-    this.cartService.changePosition(item,event.source.getFreeDragPosition());    
+  onDoubleClick(item: CartItem): void {
+    this.cartService.updateRotation(item, (item.rotation + 45) % 360); // Save the new rotation
+    this.cdr.detectChanges(); // Ensure changes are detected
   }
 
+  getTransformStyle(item: CartItem): string {
+    const rotation = `rotate(${item.rotation}deg)`;
+    return `${rotation}`;
+  }
 
-  getPosition(stringPoint:string):Point {
+  getRotation(rotation: number): string {
+    return `rotate(${rotation}deg)`;
+  }
 
+  onDragEnded(event: CdkDragEnd, item: CartItem): void {
+    this.cartService.changePosition(item, event.source.getFreeDragPosition());  
+  }
+
+  onDragStarted(event: CdkDragStart, item: CartItem){
+    this.selectedItem = item;
+  }
+
+ 
+  ngOnInit(): void {
+    // Load cart items including their rotation values
+    this.cartService.getCartObservable().subscribe(cart => {
+      this.cart = cart;
+
+    });
+
+  }
+
+  EmptyBoard() {
+    this.cartService.clearCart();
+    }
+
+  removeItem(): void {
+    // Call the service to remove the item
+    if(this.selectedItem != null)
+       this.cartService.removeOneItemfromCart(this.selectedItem);
+
+    this.selectedItem = null;
+  }
+
+  getPosition(stringPoint: string): Point {
     return this.parsePoint(stringPoint);
+
   }
+
 
   private parsePoint(str: string): { x: number; y: number } {
     // Regular expression to find x and y values
