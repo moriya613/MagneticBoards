@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { Order } from '../../../shared/models/Order';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../../../services/order.service';
-import { CdkDragEnd, Point } from '@angular/cdk/drag-drop';
+import { CdkDragEnd, CdkDragStart, Point } from '@angular/cdk/drag-drop';
 import { CartItem } from '../../../shared/models/CartItem';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-my-boards',
@@ -13,8 +14,10 @@ import { CartItem } from '../../../shared/models/CartItem';
 export class MyBoardsComponent {
   orders!:Order[];
   inputValue: string = '';
+  selectedItem: CartItem | null = null;
 
-constructor(activatedRoute:ActivatedRoute, private orderService:OrderService){
+
+constructor(activatedRoute:ActivatedRoute, private orderService:OrderService, private cartService:CartService){
 
   orderService.getOrdersForCurrentUser().subscribe(
     orders => {
@@ -22,6 +25,33 @@ constructor(activatedRoute:ActivatedRoute, private orderService:OrderService){
     }
   )
 }
+
+onDoubleClick(item: CartItem): void {
+  this.cartService.updateRotation(item, (item.rotation + 45) % 360); // Save the new rotation
+}
+
+getTransformStyle(item: CartItem): string {
+  const rotation = `rotate(${item.rotation}deg)`;
+  return `${rotation}`;
+}
+
+getRotation(rotation: number): string {
+  return `rotate(${rotation}deg)`;
+}
+
+
+onDragStarted(event: CdkDragStart, item: CartItem){
+  this.selectedItem = item;
+}
+
+ removeItem(order:Order): void {
+    // Call the service to remove the item
+    if(this.selectedItem != null)
+      order.items = order.items.filter(x => x != this.selectedItem);
+
+    this.selectedItem = null;
+    this.saveAfterEdit(order);
+  }
 
 getStatus(order:Order):string{
   return this.orderService.getHebrewStatus(order);
@@ -53,7 +83,7 @@ public onDragEnded(event: CdkDragEnd, cItem:CartItem, order:Order): void {
     return;
   cartItem.position = '{x:' +event.source.getFreeDragPosition().x+ ', y:' + event.source.getFreeDragPosition().y+ '}';
   
-
+  this.saveAfterEdit(order);
   //this.orderService.changePosition(imageUrl,event.source.getFreeDragPosition());    
 }
 

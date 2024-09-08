@@ -34,32 +34,48 @@
  
 
 
-        <div class="board-container" >
+    <div class="board-container">
 
-            <div class="center-content"
-                [style.height.cm]="12"
-                [style.width.cm]="order.widthOfBoard">
-                    <ul>
-                        <li *ngFor="let cartItem of order.items" >
-                            <div class="image-container"
-                            [style.height.cm]="cartItem.item.length/10"
-                            [style.width.cm]="cartItem.item.width/10">
-                            <img class="scaled-image"
-                            [src]="cartItem.item.imageUrl"
-                            cdkDrag [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
-                            cdkDrag cdkDragBoundary=".center-content" 
-                            (cdkDragEnded)="onDragEnded($event, cartItem, order)">
-                            </div>
-                        </li>
-                    </ul>
-             </div>
+        <div class="center-content" [style.height.cm]="12" [style.width.cm]="order.widthOfBoard" >
+          <ul>
+            <li *ngFor="let cartItem of order.items">
+              <div
+                class="image-container"
+                id="Icontainer"
+                [style.height.cm]="cartItem.item.length / 10"
+                [style.width.cm]="cartItem.item.width / 10"
+                cdkDrag
+                [cdkDragData]="cartItem"
+                [cdkDragFreeDragPosition]="getPosition(cartItem.position)"
+                (cdkDragEnded)="onDragEnded($event, cartItem, order)"
+                (cdkDragStarted)="onDragStarted($event, cartItem)">
+                <img
+                  class="scaled-image"
+                  [src]="cartItem.item.imageUrl"
+                  [style.transform]="getTransformStyle(cartItem)"
+                  (dblclick)="onDoubleClick(cartItem)" />
+              </div>
+            </li>
+          </ul>
+
+
         </div>
-        <div class="buttons">
-            <button (click)="saveAfterEdit(order)" >
-              שמירה לאחר עריכה
-            </button>
+    
+        </div>
 
-    </div>
+        <div class="buttons">
+          
+            <button class="removeItem"  (mouseup)="removeItem(order)">   גרור לכאן כדי למחוק פריט 🗑️</button>
+        </div>
 
     
+</div>
+
+
+<div class="buttons-container">
+
+    <strong  *ngIf="orders.length == 0"> אין לוחות לאישור</strong>
+
+    </div> 
+
 </div>
