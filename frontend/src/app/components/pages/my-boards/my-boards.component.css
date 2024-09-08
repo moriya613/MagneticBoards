@@ -6,16 +6,28 @@
 
 }
 
+.content{
+  margin-top: 2rem;
+  z-index: 1; /* Lower than the button */
+
+}
+
 .details {
+  z-index: 1; /* Lower than the button */
+
   margin-bottom: 1rem;
 }
 
 .details >div {
   margin: 1rem;
   font-size: 1.1rem;
+  z-index: 1; /* Lower than the button */
+
 }
 
 .details strong {
+  z-index: 1; /* Lower than the button */
+
   display: inline-block;
   width: 20%
 }
@@ -27,6 +39,8 @@
   align-items: center;
   justify-content: center;
   height: 87vh; /* 100% of the viewport height */
+  z-index: 1; /* Lower than the button */
+
 }  
 
 .center-content {
@@ -34,6 +48,8 @@
 
   border: 5px solid gainsboro;
   border-radius: 1rem;
+  z-index: 1; /* Lower than the button */
+
   /* Additional styles for your centered content */
 }
 
@@ -48,7 +64,8 @@
 
 .image-container {
   position: absolute;
- 
+  z-index: 1; /* Lower than the button */
+
  }
 
 .scaled-image:hover{
@@ -106,31 +123,20 @@ label {
 }
 
 
-button{
-  color: white;
-  background-color: #e72929;
-  width: 15rem;
-  height: 2rem;
-  opacity: 0.8;
-  font-size: 1rem;
+.removeItem {
+  position: relative;
+  margin-top: 1rem;
+
+  margin-bottom: 2rem;
+  outline: 1.8px solid rgb(228, 182, 182);
+  
   border: none;
-  border-radius: 0.5rem;
-  box-shadow: 2px 2px 2px 2px grey;
-  margin-bottom: 10rem;
-}
-
-button:hover{
-  opacity: 1;
-  cursor: pointer;
-}
-
-.removeItem{
-  margin-right: 2rem;
-  background-color: #e72929;
-  z-index: 1000; /* High value to bring the button to the front */
-
+  background-color: rgb(237, 215, 215);
+  border-bottom: 1px solid rgb(228, 182, 182);
+  z-index: 1000000; /* High value to bring the button to the front */
 
 }
+
 .removeItem:hover {
   opacity: 0.5;
 }

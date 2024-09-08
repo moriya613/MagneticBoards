@@ -26,8 +26,15 @@ constructor(activatedRoute:ActivatedRoute, private orderService:OrderService, pr
   )
 }
 
-onDoubleClick(item: CartItem): void {
-  this.cartService.updateRotation(item, (item.rotation + 45) % 360); // Save the new rotation
+onDoubleClick(cItem:CartItem, order: Order): void {
+
+  let cartItem = order.items.find(x=> x == cItem);
+  if(!cartItem)
+    return;
+  cartItem.rotation = (cartItem.rotation + 45) % 360;
+  
+  this.saveAfterEdit(order);
+
 }
 
 getTransformStyle(item: CartItem): string {
@@ -42,6 +49,13 @@ getRotation(rotation: number): string {
 
 onDragStarted(event: CdkDragStart, item: CartItem){
   this.selectedItem = item;
+}
+
+deleteBoard(order:Order){
+  this.orders = this.orders.filter(x => x!=order);
+  this.orderService.DeleteOrder(order).subscribe(
+
+  );
 }
 
  removeItem(order:Order): void {
@@ -88,6 +102,7 @@ public onDragEnded(event: CdkDragEnd, cItem:CartItem, order:Order): void {
 }
 
 saveAfterEdit(order:Order){
+  order.status = 'NEW';
   this.orderService.changeStatusToNew(order).subscribe();
 
 }

@@ -1,5 +1,4 @@
 import { environment } from "../../../environments/environment.prod";
-
 const BASE_URL =  environment.production? '' : 'http://localhost:5000';
 //const BASE_URL =  'http://localhost:5000';
 
@@ -27,6 +26,8 @@ export const ORDER_CREATE_URL = ORDERS_URL + '/create';
 export const ORDER_CHANGE_STATUS_TO_APPROVE = ORDERS_URL + '/changeStatusToApprove'
 export const ORDER_CHANGE_STATUS_TO_PAYED = ORDERS_URL + '/changeStatusToPayed'
 export const ORDER_CHANGE_STATUS_TO_REJECT = ORDERS_URL + '/changeStatusToReject'
+export const ORDER_DELETE = ORDERS_URL + '/delete'
+
 
 export const ORDER_CHANGE_STATUS_TO_NEW = ORDERS_URL + '/changeStatusToNew'
 

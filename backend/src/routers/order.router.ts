@@ -20,13 +20,6 @@ asyncHandler(async (req:any, res:any) =>
         res.status(HTTP_BAD_REQUEST).send('עגלה ריקה');
         return;
     }
-
-    // await OrderModel.deleteOne(
-    //     {
-    //         user:req.user.id,
-    //         status:OrderStatus.NEW
-    //     });
-
         const newOrder = new OrderModel ({...requestOrder, user:req.user.id});
         await newOrder.save();
         res.send(newOrder);
@@ -101,6 +94,23 @@ router.get('/getAllOrders', asyncHandler( async (req:any,res ) => {
     if(!orders) console.log("orders was not found");
     res.send(orders);
 }))
+
+router.post('/delete', asyncHandler( async (req:any, res) => {
+    console.log("inside delete");
+    const {id} = req.body;
+    console.log("inside delete" +id);
+
+    try{
+        await OrderModel.deleteOne({ _id: id});
+        res.status(200).json({ message: 'order removed successfully' });
+        console.log(`Order with id '${id}' removed successfully.`);
+
+      } catch(err) {
+          res.status(HTTP_BAD_REQUEST).send("Error while removing order");
+          console.error('Error while removing order:', err);
+      }    
+}))
+
 
 router.post('/changeStatusToApprove', asyncHandler( async (req:any, res) => {
     console.log("inside changeStatusToApprove");
